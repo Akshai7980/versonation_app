@@ -1,0 +1,12 @@
+<div *ngFor="let song of songs; let last = last;">
+  <div class="songContainer" [class.removeBorderBottom]="last">
+      <div class="songThumbnail">
+          <img class="play_icon" [src]="'../../../../../assets/images/icons/play-icon.png'" alt="">
+          <img class="musicIcon" [src]="song.popularListimage" alt="" (click)="playSong(song)">
+      </div>
+      <span class="songName">{{song.name}}</span>
+      <span class="artist">{{song.artists}}</span>
+      <span class="duration">3:41</span>
+  </div>
+</div>
+<p class="no-data" *ngIf="songs.length <= 0">No songs available for the current playlist</p>

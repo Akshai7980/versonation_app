@@ -1,0 +1,33 @@
+<app-header-with-sidenav>
+
+  <div class="main-wrapper">
+    <div class="main-content-wrapper">
+
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" (change)="onCategoryClick($event)" class="page-tab">
+        <mat-button-toggle [value]="labels.value" *ngFor="let labels of toggleButtonLabels" class="btn-item">
+          {{ labels.name }}
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+
+      <app-playlist *ngIf="category === 'playlist' "></app-playlist>
+      <app-artist-list-tile *ngIf="category === 'artist' "></app-artist-list-tile>
+      <app-trending-albums *ngIf="category === 'albums' "></app-trending-albums>
+      <app-trending-songs (openMusicPannel)="openMusicPannel($event)" *ngIf="category === 'songs' "></app-trending-songs>
+      <app-watchlist *ngIf="category === 'watchlist' "></app-watchlist>
+      <app-recommended *ngIf="category === 'recommended' "></app-recommended>
+      <app-downloaded *ngIf="category === 'downloaded' "></app-downloaded>
+      <app-content (openMusicPannel)="openMusicPannel($event)" *ngIf="category === 'content' "></app-content>
+
+    </div>
+    <div class="right-side-bar ng-star-inserted">
+      <div class="shadow-box">
+        <div class="title">
+          <h3>New Artists </h3>
+        </div>
+        <app-new-artist-list></app-new-artist-list>
+      </div>
+    </div>
+
+  </div>
+
+</app-header-with-sidenav>

@@ -1,0 +1,87 @@
+<div class="main-wrapper" >
+    <div class="main-content-wrapper">
+        <div class="account-payment-details-wrapper">
+            <mat-tab-group>
+                <mat-tab label = "Link bank"> 
+
+                    <div  class="shadow-box-lg">
+                        <form [formGroup]="bankForm" class="form-block" >
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>in Direct selling</mat-label>
+                                        <input matInput placeholder="Bank" formControlName="bank" />
+                                    </mat-form-field>     
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Bank Code</mat-label>
+                                        <input matInput placeholder="012HSB25" formControlName="bank_code" />
+                                    </mat-form-field>     
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Account Number</mat-label>
+                                        <input matInput placeholder="2515593654" formControlName="account_no" />
+                                    </mat-form-field>     
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Account holder</mat-label>
+                                        <input matInput placeholder="James Kelvin " formControlName="account_holder" />
+                                    </mat-form-field>     
+                                </div>
+                            </div>
+                            <div class="btn-wrap mb-16">
+                                <button (click)="submit('bank')" mat-button class="btn" type="submit">Share to timeline</button>
+                            </div>
+                        </form>
+                    </div>
+                  
+                </mat-tab>
+                <mat-tab label = "Link Credit/ Debit Card"> 
+                    <div  class="shadow-box-lg">
+                        <form [formGroup]="cardForm" class="form-block" >
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-12">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Debit or Credit card number</mat-label>
+                                        <input matInput placeholder="1234568991212" formControlName="card_no" />
+                                      </mat-form-field>     
+                                 </div>
+                                <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>in Direct selling</mat-label>
+                                        <input matInput placeholder="Bank" formControlName="card_type" />
+                                      </mat-form-field>     
+                                 </div>
+                                 <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Bank Code</mat-label>
+                                        <input matInput placeholder="012HSB25" formControlName="exp_date" />
+                                      </mat-form-field>     
+                                 </div>
+                                 <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Account Number</mat-label>
+                                        <input matInput placeholder="2515593654" formControlName="cvc" />
+                                      </mat-form-field>     
+                                 </div>
+                                 <div class="col-xs-12 col-sm-6 col-6">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Account holder</mat-label>
+                                        <input matInput placeholder="James Kelvin " formControlName="card_holder" />
+                                      </mat-form-field>     
+                                 </div>
+                            </div>
+                            <div class="btn-wrap mb-16">
+                                <button (click)="submit('card')" mat-button class="btn" type="submit">Link your Card</button>
+                            </div>
+                        </form>
+                    </div>
+                  
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>

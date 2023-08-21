@@ -1,0 +1,179 @@
+@import '../../../../../assets/scss/tools/variables';
+
+
+.sort-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .search-item {
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 20px;
+        }
+
+        .field-block {
+            background-color: #fff;
+            border: solid 1px #d9d9d9;
+            border-radius: 30px;
+
+            input {
+                border: none;
+                padding: 5px 15px;
+                background: transparent;
+            }
+
+            button {
+                background: transparent;
+                border: none;
+            }
+        }
+    }
+
+    .point-block {
+        margin-left: auto;
+        display: flex;
+
+        .point-balance {
+            color: $primary-dark;
+            font-size: 16px;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        button {
+            background: transparent;
+            border: none;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+.item-wrapper {
+    margin-bottom: 30px;
+
+    .item {
+        figure {
+            height: 190px;
+            background-color: #c8c8c8;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            padding: 15px;
+
+            h4 {
+                color: $title-color;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            p {
+                color: $primary-dark ;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .sub-title {
+        display: flex;
+        border-bottom: solid 1px #dcdcdc;
+        padding-bottom: 20px;
+
+        h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .arrow-block {
+            margin-left: auto;
+            display: flex;
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+mat-carousel {
+    .carousel-list {
+        .carousel-slide {
+            .carousel-slide-content {
+                background-color: #fafafa !important;
+            }
+        }
+    }
+}
+
+
+@import "~swiper/css";
+@import "~swiper/css/navigation";
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-item{
+    cursor: pointer;
+    .content {
+        padding: 15px;
+
+        h4 {
+            color: $title-color;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    height: 190px;
+    margin-bottom: unset;
+}
+
+.plus-icon {
+    height: 100% !important;
+}

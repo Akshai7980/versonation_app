@@ -1,0 +1,40 @@
+<app-header-with-sidenav>
+  <div class="main-wrapper">
+    <div class="main-content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="right-side-bar" *ngIf="!isGuest">
+      <div class="shadow-box">
+        <div class="title">
+          <h3>Live Auctions</h3>
+        </div>
+        <app-live-actions></app-live-actions>
+        <app-live-actions></app-live-actions>
+        <div class="show-more-btn" routerLink="/home/auction" >
+            <a
+            >Show more
+            <span>
+              <img src="../../../assets/images/icons/arrow-down.svg" />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="shadow-box">
+        <div class="title">
+          <h3>Direct Selling</h3>
+        </div>
+        <app-direct-selling></app-direct-selling>
+        <app-direct-selling></app-direct-selling>
+        <div class="show-more-btn" routerLink="/home/sale">
+          <a 
+            >Show more
+            <span>
+              <img src="../../../assets/images/icons/arrow-down.svg" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-header-with-sidenav>

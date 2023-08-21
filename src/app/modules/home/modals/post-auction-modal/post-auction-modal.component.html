@@ -1,0 +1,57 @@
+<div class="main_container">
+
+    <div class="heading">
+        <p>Post Auction</p>
+    </div>
+    <form [formGroup]="auctionForm">
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Title </mat-label>
+            <input matInput  placeholder="title" formControlName="title">
+            <mat-error>This filed is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sub Title </mat-label>
+            <input matInput  formControlName="sub_title" placeholder="sub title">
+            <mat-error>This filed is required</mat-error>
+        </mat-form-field>
+
+        <div class="flex">
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Amount</mat-label>
+                <input matInput formControlName="amount" type="number" placeholder="amount">
+                <mat-error>This filed is required</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Time</mat-label>
+                <input type="time" formControlName="time" matInput  placeholder="time">
+                <mat-error>This filed is required</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="input_div">
+            <label for="file">Please select file</label>
+            <input class="file_input" id="file" name="file" formControlName="file"  type="file" accept="image/*">
+            <p *ngIf="auctionForm.controls['file'].touched && !auctionForm.controls['file'].value" class="file_err">This filed is required</p>
+        </div>
+
+        <div class="input_div" style="margin-top: 10px;">
+            <label for="">Please select a demo file</label>
+            <input class="file_input" type="file" formControlName="demo_file" accept="">
+            <p *ngIf="auctionForm.controls['demo_file'].touched && !auctionForm.controls['demo_file'].value" class="file_err">This filed is required</p>
+        </div>
+        
+
+       
+        <!-- <input class="file_input" formControlName="file" type="file">
+        
+        <input style="margin-top: 20px;" class="file_input" formControlName="file" type="file">
+        <p *ngIf="auctionForm.controls['file'].touched && !auctionForm.controls['file'].value" class="file_err">This filed is required</p> -->
+        
+    </form>
+
+    <div class="buttons" align="end">
+        <button (click)="close()" mat-stroked-button color="">Cancel</button>
+        <button (click)="submit()" class="ok_btn"  mat-stroked-button color="primary">Post</button>
+    </div>
+</div>

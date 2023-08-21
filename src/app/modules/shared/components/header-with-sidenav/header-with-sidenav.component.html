@@ -1,0 +1,151 @@
+<mat-drawer-container hasBackdrop="true">
+  <mat-drawer #drawer mode="push" class="side-bar" [opened]="true">
+    <app-sidenav *ngIf="
+            currentRoute !== '/artist-account/upgrade' &&
+            currentRoute !== '/artist-account/earnings' &&
+            currentRoute !== '/artist-account/analytics' &&
+            currentRoute !== '/artist-account/invite' &&
+            currentRoute !== '/artist-account/payment-details' &&
+            currentRoute !== '/artist-account/quantity' &&
+            currentRoute !== '/streaming'
+            ">
+      </app-sidenav>
+    <app-account-sidebar *ngIf="
+            currentRoute === '/artist-account/upgrade' ||
+            currentRoute === '/artist-account/earnings' || 
+            currentRoute === '/artist-account/analytics' ||
+            currentRoute === '/artist-account/invite' ||
+            currentRoute === '/artist-account/payment-details'  ||
+            currentRoute === '/artist-account/quantity' 
+            ">
+    </app-account-sidebar>
+    <app-streaming-sidebar *ngIf="currentRoute === '/streaming'"></app-streaming-sidebar>
+  </mat-drawer>
+  <mat-drawer-content class="main-container">
+    <div class="navbar navbar-white">
+      <div class="main-brand">
+        <!-- <a href="" class="brand-logo"><img src="../../../assets/images/logos/logo.png" alt="" /></a> -->
+
+        <button mat-raised-button (click)="drawer.toggle()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="42"
+            height="21"
+            viewBox="354 51 42 21"
+          >
+            <g data-name="Group 1">
+              <path
+                d="M354 51h42v3h-42v-3z"
+                fill="#4a4a4a"
+                fill-rule="evenodd"
+                data-name="Rectangle 1"
+              />
+              <path
+                d="M354 60h26v3h-26v-3z"
+                fill="#4a4a4a"
+                fill-rule="evenodd"
+                data-name="Rectangle 2"
+              />
+              <path
+                d="M354 69h16v3h-16v-3z"
+                fill="#4a4a4a"
+                fill-rule="evenodd"
+                data-name="Rectangle 3"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+
+      <button
+        class="menu-icon"
+        mat-icon-button
+        aria-label="Example icon button with a menu icon"
+        (click)="toggleSideBar()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <div class="collapse-menu" [ngClass]="status ? 'show-menu' : ''">
+        <div class="navbar-nav">
+          <a  [ngClass]="{'item': selectedItem == 'home'}" (click)="toggleSideBar(); selectItem('home')" mat-button routerLink="/home"
+            >Home</a
+          >
+          <a  [ngClass]="{'item': selectedItem == 'streaming'}" (click)="toggleSideBar(); selectItem('streaming')" mat-button routerLink="/streaming"
+            >Streaming</a
+          >
+          <a  [ngClass]="{'item': selectedItem == 'help'}" (click)="toggleSideBar(); selectItem('help')" mat-button routerLink="/static/help"
+            >Help</a
+          >
+          <a [ngClass]="{'item': selectedItem == 'about'}" (click)="toggleSideBar(); selectItem('about')" mat-button routerLink="/static/about"
+            >About</a
+          >
+          <a (click)="toggleSideBar()" *ngIf="isGuest" routerLink="" mat-button
+            >Log in</a
+          >
+          <a
+            *ngIf="isGuest"
+            class="name-section"
+            mat-button
+            [matMenuTriggerFor]="profileMenu"
+            >Guest User</a
+          >
+          <a
+            *ngIf="!isGuest"
+            class="name-section"
+            
+            [matMenuTriggerFor]="profileMenu"
+            ><div class="block">
+              {{ user?.name }}
+              <figure class="profile-image">
+                <img *ngIf="profileImage" [src]="profileImage" alt="" />
+                <img
+                  *ngIf="!profileImage"
+                  src="../../../assets/images/pic/profile.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+          </a>
+          <mat-menu #profileMenu="matMenu" (click)="toggleSideBar()" class="profile-menu">
+            <button *ngIf="!isGuest" mat-menu-item routerLink="/home/profile">
+              <span>
+                <i>
+                  <img
+                
+                  src="../../../assets/images/icons/profile.svg"
+                  alt=""
+                />
+                </i>
+                Profile</span>
+            </button>
+            <button *ngIf="!isGuest" mat-menu-item routerLink="/artist-account/earnings">
+              <span>
+                <i>
+                  <img
+                
+                  src="../../../assets/images/icons/settings.svg"
+                  alt=""
+                />
+                </i>
+                Account</span>
+            </button>
+            <button mat-menu-item (click)="signOut()">
+              <span>
+                <i>
+                  <img
+                
+                  src="../../../assets/images/icons/logout.svg"
+                  alt=""
+                />
+                </i>
+                Logout</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+
+    <ng-content></ng-content>
+  </mat-drawer-content>
+</mat-drawer-container>

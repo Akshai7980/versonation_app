@@ -1,0 +1,26 @@
+<app-header-with-sidenav>
+  <div class="main-wrapper">
+    <div class="main-content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="main-wrapper">
+      <div class="main-content-wrapper">
+        <app-artist-list-tile></app-artist-list-tile>
+      </div>
+
+      <div class="right-side-bar ng-star-inserted">
+        <div class="shadow-box">
+          <div class="title">
+            <h3>New Artists </h3>
+          </div>
+          <app-new-artist-list></app-new-artist-list>
+          <app-new-artist-list></app-new-artist-list>
+          <app-new-artist-list></app-new-artist-list>
+          <app-new-artist-list></app-new-artist-list>
+          <app-new-artist-list></app-new-artist-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-header-with-sidenav>

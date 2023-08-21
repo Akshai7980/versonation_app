@@ -1,0 +1,130 @@
+<!-- <div class="sort-block">
+    <div class="search-item">
+        <span>sort</span>
+        <div class="field-block">
+            <input placeholder="Search" />
+            <button>search</button>
+        </div>
+    </div>
+    <div class="point-block">
+        <div class="point-balance">
+            Point balance
+            <span>320</span>
+        </div>
+        <button>Plus</button>
+    </div>
+</div> -->
+
+<div class="trending-albums-block">
+    <div class="row">
+      <div class="col-12">
+        <div class="title">
+          <h2>Trending</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <div class="sub-title">
+            <h4>Albums</h4>
+            <div class="arrow-block">
+              <span>
+                <img src="../../../assets/images/icons/arrow-left.svg" />
+              </span>
+              <span>
+                <img src="../../../assets/images/icons/arrow-right.svg" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div [style.height]="'auto'">
+          <!-- <mat-carousel timings="250ms ease-in" [autoplay]="true" color="accent" maxWidth="auto" [loop]="true"
+            [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false"
+            orientation="ltr"> -->
+            <!-- <mat-carousel-slide> -->
+              <div class="col-xs-12 col-sm-3 col-3" *ngFor="let album of albums.slice(0, 8)" (click)="onClickArtist(album)">
+                <div class="item">
+                  <figure><img [src]="album.image" /></figure>
+                  <div class="content">
+                    <h4>{{ album.albumName }}</h4>
+                    <h5>Created by {{ album.artists }}</h5>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <!-- </mat-carousel-slide> -->
+
+            <!-- <mat-carousel-slide> -->
+              <!-- <div class="col-xs-12 col-sm-3 col-3" *ngFor="let album of albums.slice(8, 16)">
+                <div class="item">
+                  <figure><img [src]="album.image" /></figure>
+                  <div class="content">
+                    <h4>{{ album.albumName }}</h4>
+                    <h5>Created by {{ album.artists }}</h5>
+                    <p>
+                      It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking.
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+            <!-- </mat-carousel-slide>
+          </mat-carousel> -->
+        </div>
+
+        <!-- <div class="col-xs-12 col-sm-3 col-3">
+          <div class="item">
+            <figure><img src="../../../assets/images/streaming/album-02.png" /></figure>
+            <div class="content">
+              <h4>{{ album.albumName }} </h4>
+              <p>
+                It is a long established
+                fact that a reader will
+                be distracted by the
+                readable content of
+                a page when looking.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-3">
+          <div class="item">
+            <figure><img src="../../../assets/images/streaming/album-03.png" /></figure>
+            <div class="content">
+              <h4>{{ album.albumName }} </h4>
+              <p>
+                It is a long established
+                fact that a reader will
+                be distracted by the
+                readable content of
+                a page when looking.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-3">
+          <div class="item">
+            <figure><img src="../../../assets/images/streaming/album-04.png" /></figure>
+            <div class="content">
+              <h4>{{ album.albumName }} </h4>
+              <p>
+                It is a long established
+                fact that a reader will
+                be distracted by the
+                readable content of
+                a page when looking.
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+</div>

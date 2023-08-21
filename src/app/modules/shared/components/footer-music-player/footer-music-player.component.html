@@ -1,0 +1,25 @@
+<div class="main">
+    <div class="left_div">
+        <p class="custom_icons">
+            <span><img src="../../../../../assets/images/icons/heart-angular.svg" alt=""></span>
+            <span><img src="../../../../../assets/images/icons/share.svg" alt=""></span>
+            <!-- <span>Like</span> -->
+            <!-- <span>Dislike</span> -->
+        </p>
+    </div>
+    <div class="container_player">
+        <ang-music-player 
+        width="100%"
+        height="50px"
+        backgroundColor="#ffffff" 
+        timeSliderColor="#b1b1b1" 
+        volumeSliderColor="#b1b1b1" 
+        [audioList] = "audioList"
+       ></ang-music-player>
+    
+       
+    </div>
+    <div class="right_div">
+     <p (click)="close()"><img class="close_icon" src="../../../../../assets/images/icons/x.svg" alt=""></p>
+    </div>
+</div>

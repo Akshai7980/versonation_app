@@ -1,0 +1,59 @@
+<div class="artist-profile-block">
+    <div class="image-wrapper">
+        <div class="profile-banner">
+            <figure>
+                <img [src]="profileData?.coverImageUrl??'assets/images/pic/image-01.jpg'" alt="" />
+            </figure> 
+            <span *ngIf="isEdit" class="camera" (click)="coverImageUrl.click()">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="1112.85 459.058 29.825 22.942"><g data-name="211634_camera_icon"><path d="M1140.266 462.714h-4.84l-2.896-2.925s-.014-.014-.022-.014l-.014-.015a2.345 2.345 0 0 0-1.67-.702h-6.023c-.702 0-1.326.3-1.764.781v.007l-2.831 2.868h-4.947c-1.334 0-2.41 1.047-2.41 2.38v14.49a2.411 2.411 0 0 0 2.41 2.416h25.007a2.416 2.416 0 0 0 2.409-2.416v-14.49c0-1.333-1.083-2.38-2.41-2.38Zm-12.504 15.665c-3.65 0-6.624-2.982-6.624-6.639 0-3.663 2.975-6.639 6.624-6.639 3.657 0 6.625 2.976 6.625 6.64 0 3.656-2.968 6.638-6.625 6.638Zm12.052-11.83a1.008 1.008 0 0 1-1.004-1.01c0-.56.452-1.011 1.004-1.011s1.004.452 1.004 1.01c0 .56-.452 1.012-1.004 1.012Z" fill="#2a2a2a" fill-rule="evenodd" data-name="Path 139"/><path d="M1127.762 466.722a5.007 5.007 0 0 0-5.004 5.018c0 2.768 2.237 5.02 5.004 5.02a5.012 5.012 0 0 0 5.005-5.02 5.012 5.012 0 0 0-5.005-5.018Z" fill="#2a2a2a" fill-rule="evenodd" data-name="Path 140"/></g></svg>
+                </i>
+                <input #coverImageUrl hidden type="file" (change)="changeImg($event.target,'coverImageUrl')">
+            </span>
+         </div>
+         <div class="profile-avatar">
+            <figure>
+                <img [src]="profileData?.profileImageUrl"/>
+            </figure>
+            <span *ngIf="isEdit" class="camera" (click)="profileImageUrl.click()">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="1112.85 459.058 29.825 22.942"><g data-name="211634_camera_icon"><path d="M1140.266 462.714h-4.84l-2.896-2.925s-.014-.014-.022-.014l-.014-.015a2.345 2.345 0 0 0-1.67-.702h-6.023c-.702 0-1.326.3-1.764.781v.007l-2.831 2.868h-4.947c-1.334 0-2.41 1.047-2.41 2.38v14.49a2.411 2.411 0 0 0 2.41 2.416h25.007a2.416 2.416 0 0 0 2.409-2.416v-14.49c0-1.333-1.083-2.38-2.41-2.38Zm-12.504 15.665c-3.65 0-6.624-2.982-6.624-6.639 0-3.663 2.975-6.639 6.624-6.639 3.657 0 6.625 2.976 6.625 6.64 0 3.656-2.968 6.638-6.625 6.638Zm12.052-11.83a1.008 1.008 0 0 1-1.004-1.01c0-.56.452-1.011 1.004-1.011s1.004.452 1.004 1.01c0 .56-.452 1.012-1.004 1.012Z" fill="#2a2a2a" fill-rule="evenodd" data-name="Path 139"/><path d="M1127.762 466.722a5.007 5.007 0 0 0-5.004 5.018c0 2.768 2.237 5.02 5.004 5.02a5.012 5.012 0 0 0 5.005-5.02 5.012 5.012 0 0 0-5.005-5.018Z" fill="#2a2a2a" fill-rule="evenodd" data-name="Path 140"/></g></svg>
+                </i>
+                <input #profileImageUrl hidden type="file" (change)="changeImg($event.target,'profileImageUrl')">
+            </span>
+         </div>
+    </div>
+    <div class="content-block">
+        <div class="title">
+            <div class="title-info">
+                <div class="title-name-block">
+                    <h3>{{profileData?.name}}</h3>
+                    <span>{{followingCount == undefined ? 0 : followingCount}} Following</span>
+                    <span class="followers">2.2K Followers</span>
+                </div>
+                <div class="right-opt">
+                    <span *ngIf="isEdit" [matMenuTriggerFor]="more" style="cursor: pointer;">...
+                            <!-- <img src="../../../../../assets/images/icons/more-horizontal.svg" /> -->
+                            <!-- <img src="../../../../assets/images/icons/bell-cross.svg" /> -->
+                     </span>
+                    <span *ngIf="isEdit && profileDetails?.enableNotifications" >
+                        <img src="../../../../assets/images/icons/bell.svg" />
+                    </span>
+                    <span *ngIf="isEdit && !profileDetails?.enableNotifications">
+                        <img src="../../../../assets/images/icons/bell-cross.svg" />
+                    </span>
+                    <button class="btn btn-outline-primary medium">Follow</button>
+                </div>
+                <mat-menu #more="matMenu" >
+                    <button mat-menu-item  (click)="openProfileEdit()">
+                        <span>Edit</span>
+                    </button>
+                    
+                </mat-menu>
+            </div> 
+            <p>{{profileData?.bestdescription}}</p>   
+        </div> 
+        <h5>Bio</h5>   
+        <p>{{profileData?.bio}}</p>
+    </div>
+</div>

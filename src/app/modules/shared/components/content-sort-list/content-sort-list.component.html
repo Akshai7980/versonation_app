@@ -1,0 +1,30 @@
+
+
+<div class="trending-albums-block">
+
+    <div class="item-wrapper">
+      <div class="row">
+        <div class="col-12">
+          <div class="sub-title">
+            <h4>My Content</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+            <p class="not_found" *ngIf="topMusic.length == 0">No Content Found!</p>
+          <div class="col-xs-12 col-sm-3 col-3" *ngFor="let top of topMusic | filter: serachTerm:'name'">
+            <div class=" item" (click)="getItem(top)">
+              <figure><img [src]="top?.popularListimage" /></figure>
+              <div class="content">
+                <h4>{{ top?.name ? top.name : "--" }}</h4>
+                <h5>{{ top?.artists ? top.artists : "--" }}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  

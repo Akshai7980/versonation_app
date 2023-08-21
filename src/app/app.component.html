@@ -1,0 +1,12 @@
+<div *ngIf="isLoading | async" class="overlay">
+  <mat-progress-spinner class="spinner" diameter="50" mode="indeterminate">
+  </mat-progress-spinner>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
+<footer *ngIf="isFooterMusicPlayer" >
+  <app-footer-music-player [datas]="datas" (closeMusicPlayer)="closeMusicPlayer($event)"></app-footer-music-player>
+</footer>

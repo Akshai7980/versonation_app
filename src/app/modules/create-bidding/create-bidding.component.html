@@ -1,0 +1,221 @@
+<app-header-with-sidenav>
+
+
+    <div class="main-wrapper">
+        <div class="main-content-wrapper">
+            <div  class="shadow-box bidding-wrapper">
+                
+                <form [formGroup]="auctionForm" class="form-block">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-6">
+                            <mat-form-field appearance="outline" class="mr-10">
+                                <mat-label>Title</mat-label>
+                                <input matInput placeholder="Music Band" formControlName="title" />
+                            </mat-form-field>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-6">
+
+                            
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Type</mat-label>
+                                <input type="text"
+                                       placeholder="Select Type"
+                                       aria-label="text"
+                                       matInput
+                                       formControlName="type"
+                                       [matAutocomplete]="auto">
+                                       <mat-icon matSuffix>expand_more</mat-icon>
+                                <mat-autocomplete #auto="matAutocomplete">
+                                  <mat-option *ngFor="let option of filteredOptions " [value]="option">
+                                    {{option}}
+                                  </mat-option>
+                                </mat-autocomplete>
+                              </mat-form-field>
+
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-6"> 
+                            <mat-form-field appearance="outline" >
+                                <mat-label>Amount</mat-label>  
+                                <div class="priceField">
+<input matInput                     type="number" formControlName="price"  class="example-right-align" placeholder="0">
+                                    <span matTextSuffix>$</span>
+                                </div>
+                                    
+                                
+                              </mat-form-field>
+                        </div>
+
+
+                        <div class="col-xs-12 col-sm-6 col-6">
+                            <mat-form-field appearance="outline" class="mr-10">
+                                <mat-label>Schedule</mat-label>
+                                <input  matInput placeholder="10:30PM" formControlName="time" />
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-12">
+                            <mat-form-field appearance="outline" class="mr-10">
+                                <mat-label>Description</mat-label>
+                                <textarea matInput rows="5" cols="40" formControlName="description" 
+                                    placeholder="Ex. It makes me feel..."></textarea>
+                            </mat-form-field>
+                        </div>
+
+                        <div>
+                            <div class="item-block">
+                                <div class="col-xs-12 col-sm-3 ">
+                                    <button (click)="imageUpload.click()"
+                                     type="button" class="item-btn" >
+                                        <mat-icon matSuffix>add_a_photo</mat-icon>
+                                        <span>Add Picture</span>
+                                    </button>
+                                    <input style="display: none;" (change)="onFileSelected($event)" formControlName="image" accept="image/png, image/gif, image/jpeg" #imageUpload  type="file">
+                                </div> 
+
+                                <div class="col-xs-12 col-sm-3 ">
+                                    <button (click)="docUpload.click()"
+                                     type="button" class="item-btn" >
+                                     <mat-icon matSuffix>note_add</mat-icon>
+                                     <span>Add Document</span>
+                                    </button>
+                                    <input style="display: none;" (change)="onFileSelected($event)" formControlName="document" accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf" #docUpload  type="file">
+                                </div>
+
+                                <div class="col-xs-12 col-sm-3 ">
+                                    <button (click)="videoUpload.click()"
+                                     type="button" class="item-btn" >
+                                     <mat-icon matSuffix>video_call</mat-icon>
+                                        <span>Add Video</span>
+                                    </button>
+                                    <input style="display: none;" (change)="onFileSelected($event)" formControlName="video" accept="video/mp4,video/x-m4v,video/*" #videoUpload  type="file">
+                                </div> 
+                                <div class="col-xs-12 col-sm-3 ">
+                                    <button (click)="fileUpload.click()"
+                                     type="button" class="item-btn" >
+                                     <mat-icon matSuffix>attach_file</mat-icon>
+                                        <span>Add File</span>
+                                    </button>
+                                    <input style="display: none;" (change)="onFileSelected($event)" formControlName="file"  #fileUpload  type="file">
+                                </div> 
+                            </div>
+
+                        </div>
+
+
+                        <div class="uses-block">
+                            <div class="col-xs-12 col-sm-6 "> 
+
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Type of uses</mat-label>
+                                    <input type="text"
+                                           placeholder="select uses" 
+                                           matInput
+                                           formControlName="useType"
+                                           [matAutocomplete]="uses"
+                                           >
+                                           <mat-icon matSuffix>expand_more</mat-icon>
+                                    <mat-autocomplete #uses="matAutocomplete">
+                                      <mat-option *ngFor="let option2 of filteredOptions2 " [value]="option2">
+                                        {{option2}}
+                                      </mat-option>
+                                    </mat-autocomplete>
+                                  </mat-form-field> 
+
+
+                            </div>
+                            <div class="col-xs-12 col-sm-3 ">
+                                <button type="button">Add</button>
+                            </div>
+                        </div>
+
+                        <div class="uses-block ">
+                            <div class="col-xs-12 col-sm-6 col-6">
+                                <mat-form-field appearance="outline" class="mr-10">
+                                    <mat-label>Description</mat-label>
+                                    <textarea formControlName="description2"
+                                    placeholder="Ex. It makes me feel..." matInput rows="5" cols="40"></textarea>
+                                </mat-form-field>
+                            </div>
+                            
+                                 <div formGroupName="bidTypes" class="col-xs-12 col-sm-3 bid">
+                                    <h2>Select Bid Type</h2>
+                                    <p><mat-checkbox formControlName="regular">regular</mat-checkbox></p>
+                                    <p><mat-checkbox formControlName="exclusive">Exclusive</mat-checkbox></p>
+                                    <p><mat-checkbox formControlName="platinum">platinum</mat-checkbox></p>
+                                </div>
+                             
+                        </div>
+
+                        
+
+                        <div class="uses-block">
+                            <div class="col-xs-12 col-sm-6 ">
+                               
+
+                                <mat-form-field class="example-full-width" appearance="outline">
+                                    <mat-label>Licence Term</mat-label>
+                                    <input type="text"
+                                           placeholder="Pick one"
+                                           aria-label="text"
+                                           matInput
+                                           formControlName="licenceTerm"
+                                           [matAutocomplete]="licence">
+                                           <mat-icon matSuffix>expand_more</mat-icon>
+                                    <mat-autocomplete #licence="matAutocomplete">
+                                      <mat-option *ngFor="let option of filteredOptions3 " [value]="option">
+                                        {{option}}
+                                      </mat-option>
+                                    </mat-autocomplete>
+                                  </mat-form-field>
+                            </div> 
+                        </div> 
+
+                        <div class="col-xs-12 col-sm-12">
+                            <button type="submit" (click)="submitPost()" class="post-btn">Post</button>
+                        </div>
+
+
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="right-side-bar">
+            <div class="shadow-box">
+                <div class="title">
+                    <h3>Live Auctions</h3>
+                </div>
+                <app-live-actions></app-live-actions>
+                <app-live-actions></app-live-actions>
+                <div class="show-more-btn">
+                    <a href="#">Show more
+                        <span>
+                            <img src="../../../assets/images/icons/arrow-down.svg" />
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="shadow-box">
+                <div class="title">
+                    <h3>Direct Selling</h3>
+                </div>
+                <app-direct-selling></app-direct-selling>
+                <app-direct-selling></app-direct-selling>
+                <div class="show-more-btn">
+                    <a href="#">Show more
+                        <span>
+                            <img src="../../../assets/images/icons/arrow-down.svg" />
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</app-header-with-sidenav>

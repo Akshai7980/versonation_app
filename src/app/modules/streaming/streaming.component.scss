@@ -1,0 +1,69 @@
+mat-button-toggle-group {
+    box-shadow: none;
+    border: none;
+    height: 40px;
+}
+
+mat-button-toggle {
+    border: 1px rgba(0, 0, 0, 0) solid !important;
+    z-index: 3 !important;
+    background-color: #fafafa;
+    font-size: 13px;
+    // height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+mat-button-toggle:hover {
+    background-color: lightgray !important;
+    border-radius: 5px !important;
+}
+
+.mat-button-toggle-checked {
+    border-radius: 5px !important;
+    background-color: #FFF !important;
+}
+
+.mat-button-toggle-input {
+    background-color: none !important;
+    padding-left: 32px !important;
+}
+
+.page-tab{
+    margin-bottom: 30px;
+    border-radius: 0;
+    .btn-item{
+        font-weight: 600;
+        font-size: 13px;
+        background-color: transparent !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        margin-right: 5px;
+        &:hover, &:focus{
+            background-color: transparent !important;
+            background: transparent !important;
+            color: #385edd;
+            border-radius: 3px !important;
+        }
+        &.mat-button-toggle-checked{
+            background: #385edd !important;
+            background-color: #385edd !important;
+            color: #fff;
+            border-radius: 3px !important;
+        }
+    }
+  }
+
+app-footer-music-player{
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+    bottom: 1px;
+    border-top: 1px solid #e1e1e1;
+    background: #ffffff;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.75);
+}

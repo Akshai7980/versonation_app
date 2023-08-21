@@ -1,0 +1,485 @@
+<div class="shadow-box-lg">
+  <div class="title">
+    <div class="artist-info">
+      <figure>
+        <img
+          *ngIf="postData?.createdUser?.profileImageUrl"
+          [src]="postData?.createdUser?.profileImageUrl"
+          alt=""
+        />
+        <img
+          *ngIf="postData?.createdUser?.profileImageUrl"
+          src="../../../assets/images/pic/profile.jpg"
+          alt=""
+        />
+      </figure>
+      <div>
+        <h4>{{ postData?.createdUser?.name }}</h4>
+        <div class="date-item">
+          <span>
+            <i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="834.241 193.75 17.758 19.5"
+              >
+                <g data-name="3586371_calendar_date_schedule_icon">
+                  <g data-name="Path 104">
+                    <path
+                      d="M839.197 201.88h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33v-2.147a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M839.197 201.88h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33v-2.147a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 105">
+                    <path
+                      d="M844.204 201.88h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33v-2.147a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M844.204 201.88h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33v-2.147a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 106">
+                    <path
+                      d="M849.057 201.88h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33v-2.147a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M849.057 201.88h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33v-2.147a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 107">
+                    <path
+                      d="M839.197 206.77h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33V207.1a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M839.197 206.77h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33V207.1a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 108">
+                    <path
+                      d="M844.204 206.77h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33V207.1a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M844.204 206.77h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33V207.1a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 109">
+                    <path
+                      d="M849.057 206.77h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33V207.1a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M849.057 206.77h-2.147a.33.33 0 0 0-.33.33v2.147c0 .182.148.33.33.33h2.147a.33.33 0 0 0 .33-.33V207.1a.33.33 0 0 0-.33-.33Zm-.33 2.147h-1.487v-1.487h1.487v1.487Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 110">
+                    <path
+                      d="M851.67 195.492h-2.187v-.439c0-.718-.585-1.303-1.303-1.303-.72 0-1.304.585-1.304 1.303v.439h-2.455v-.439c0-.718-.584-1.303-1.303-1.303s-1.303.585-1.303 1.303v.439h-2.456v-.439c0-.718-.584-1.303-1.303-1.303s-1.303.585-1.303 1.303v.439h-2.182a.33.33 0 0 0-.33.33v17.098c0 .182.148.33.33.33h17.099a.33.33 0 0 0 .33-.33v-17.098a.33.33 0 0 0-.33-.33Zm-4.134-.439a.644.644 0 0 1 1.287 0v1.82a.644.644 0 0 1-1.287 0v-1.82Zm-4.418-.643c.355 0 .643.288.643.643v1.82a.644.644 0 0 1-1.287 0v-1.02c.001-.01.004-.02.004-.032 0-.01-.003-.02-.004-.03v-.738c0-.355.289-.643.644-.643Zm-5.705.643a.644.644 0 0 1 1.287 0v1.82a.644.644 0 0 1-1.287 0v-1.82Zm13.927 17.537H834.9v-16.438H836.753v.722c0 .719.585 1.303 1.303 1.303.719 0 1.303-.584 1.303-1.303v-.722h2.456v.722c0 .719.584 1.303 1.303 1.303.718 0 1.303-.584 1.303-1.303v-.722h2.455v.722a1.305 1.305 0 0 0 2.607 0v-.723h1.857v16.44Z"
+                      fill="#6d6d6d"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M851.67 195.492h-2.187v-.439c0-.718-.585-1.303-1.303-1.303-.72 0-1.304.585-1.304 1.303v.439h-2.455v-.439c0-.718-.584-1.303-1.303-1.303s-1.303.585-1.303 1.303v.439h-2.456v-.439c0-.718-.584-1.303-1.303-1.303s-1.303.585-1.303 1.303v.439h-2.182a.33.33 0 0 0-.33.33v17.098c0 .182.148.33.33.33h17.099a.33.33 0 0 0 .33-.33v-17.098a.33.33 0 0 0-.33-.33Zm-4.134-.439a.644.644 0 0 1 1.287 0v1.82a.644.644 0 0 1-1.287 0v-1.82Zm-4.418-.643c.355 0 .643.288.643.643v1.82a.644.644 0 0 1-1.287 0v-1.02c.001-.01.004-.02.004-.032 0-.01-.003-.02-.004-.03v-.738c0-.355.289-.643.644-.643Zm-5.705.643a.644.644 0 0 1 1.287 0v1.82a.644.644 0 0 1-1.287 0v-1.82Zm13.927 17.537H834.9v-16.438H836.753v.722c0 .719.585 1.303 1.303 1.303.719 0 1.303-.584 1.303-1.303v-.722h2.456v.722c0 .719.584 1.303 1.303 1.303.718 0 1.303-.584 1.303-1.303v-.722h2.455v.722a1.305 1.305 0 0 0 2.607 0v-.723h1.857v16.44Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".3"
+                      stroke="#6d6d6d"
+                      fill="transparent"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </i>
+            {{ postData?.createdAt | date : 'shortDate' }}
+          </span>
+          <span>
+            <i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="962 192 23 23"
+              >
+                <g data-name="211606_clock_icon">
+                  <g data-name="Path 87">
+                    <path
+                      d="M973.5 192c-6.353 0-11.5 5.147-11.5 11.5s5.147 11.5 11.5 11.5 11.5-5.147 11.5-11.5-5.147-11.5-11.5-11.5Zm0 22.044c-5.81 0-10.544-4.728-10.544-10.544 0-5.81 4.728-10.544 10.544-10.544 5.81 0 10.544 4.728 10.544 10.544 0 5.81-4.733 10.544-10.544 10.544Z"
+                      fill="#535353"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M973.5 192c-6.353 0-11.5 5.147-11.5 11.5s5.147 11.5 11.5 11.5 11.5-5.147 11.5-11.5-5.147-11.5-11.5-11.5Zm0 22.044c-5.81 0-10.544-4.728-10.544-10.544 0-5.81 4.728-10.544 10.544-10.544 5.81 0 10.544 4.728 10.544 10.544 0 5.81-4.733 10.544-10.544 10.544Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".6"
+                      stroke="#535353"
+                      fill="transparent"
+                    />
+                  </g>
+                  <g data-name="Path 88">
+                    <path
+                      d="M973.5 203.5h-5.308v.956h6.264v-8.033h-.956v7.077Z"
+                      fill="#535353"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      d="M973.5 203.5h-5.308v.956h6.264v-8.033h-.956v7.077Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width=".6"
+                      stroke="#535353"
+                      fill="transparent"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </i>
+            {{ postData?.createdAt | date : 'shortTime' }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <span class="sort-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="8"
+        viewBox="1284 226.95 32 8"
+      >
+        <g data-name="Group 146">
+          <g data-name="Ellipse 18">
+            <path
+              d="M1284 230.9a4 4 0 1 1 0 .1z"
+              fill="#a2a2a2"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M1284.5 230.906a3.5 3.5 0 1 1 0 .088z"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="#a2a2a2"
+              fill="transparent"
+              stroke-width=".875"
+            />
+          </g>
+          <g data-name="Ellipse 19">
+            <path
+              d="M1296 230.9a4 4 0 1 1 0 .1z"
+              fill="#a2a2a2"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M1296.5 230.906a3.5 3.5 0 1 1 0 .088z"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="#a2a2a2"
+              fill="transparent"
+              stroke-width=".875"
+            />
+          </g>
+          <g data-name="Ellipse 20">
+            <path
+              d="M1308 230.9a4 4 0 1 1 0 .1z"
+              fill="#a2a2a2"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M1308.5 230.906a3.5 3.5 0 1 1 0 .088z"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              stroke="#a2a2a2"
+              fill="transparent"
+              stroke-width=".875"
+            />
+          </g>
+        </g>
+      </svg>
+    </span>
+  </div>
+  <div class="content">
+    <!-- <h2>Grand music show</h2> -->
+    <p>
+      {{ postData?.post }}
+    </p>
+
+    <div
+      class="scrollDiv"
+      *ngIf="postData?.top3Artits && postData?.top3Artits.length"
+    >
+      <div
+        (click)="getToArtist(top)"
+        *ngFor="let top of postData?.top3Artits"
+        class="cards shadow-box"
+      >
+        <div
+          [ngStyle]="{ background: 'url(' + top?.Image + ')' }"
+          class="image-thump-block"
+        ></div>
+        <div class="caption">
+          <h5>{{ top?.name }}</h5>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="scrollDiv"
+      *ngIf="postData?.top1Music && postData?.top1Music.length"
+    >
+      <div
+        *ngFor="let top of postData?.top1Music"
+        class="cards shadow-box"
+        (click)="playMusicTrack(top)"
+      >
+        <div
+          [ngStyle]="{ background: 'url(' + top?.popularListimage + ')' }"
+          class="image-thump-block"
+        ></div>
+        <div class="caption">
+          <h5>
+            {{ top?.musicType }}
+          </h5>
+          <h6>
+            {{ top?.artists }}
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="scrollDiv"
+      *ngIf="postData?.favouritePlaylist && postData?.favouritePlaylist.length"
+    >
+      <div
+        *ngFor="let top of postData?.favouritePlaylist"
+        class="cards shadow-box"
+        (click)="goToPlaylist(top)"
+      >
+        <div
+          [ngStyle]="{ background: 'url(' + top?.Image + ')' }"
+          class="image-thump-block"
+        ></div>
+        <div class="caption">
+          <h5>{{ top?.name }}</h5>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="postData?.teaserUrl">
+      <iframe
+        [src]="postData?.teaserUrl"
+        allow="fullscreen"
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <div class="audio-container" *ngIf="postData?.teaserVideoUrl">
+      <div color="dark" lines="none">
+        <div text-center>Click to play video</div>
+        <button
+          (click)="playPostVideo(postData?.teaserVideoUrl)"
+          transparent
+          slot="end"
+          class="transpButton"
+        >
+          <div name="play" expand="icon-only"></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="audio-container" *ngIf="postData?.teaserAudioUrl">
+      <div color="medium" lines="none">
+        <div text-center>{{ track ? track : 'Play audio teaser' }}</div>
+        <button
+          (click)="playPostAudio()"
+          transparent
+          *ngIf="!postData?.audioCloseButton"
+          slot="end"
+          class="transpButton"
+        >
+          <div name="play" expand="icon-only"></div>
+        </button>
+        <button
+          (click)="closePostAudio()"
+          transparent
+          *ngIf="postData?.audioCloseButton"
+          slot="end"
+          class="transpButton"
+        >
+          <div name="pause" expand="icon-only"></div>
+        </button>
+      </div>
+    </div>
+
+    <div class="image-block" *ngIf="postData?.image">
+      <figure>
+        <img [src]="postData?.image" alt="" />
+      </figure>
+    </div>
+  </div>
+  <div class="respond-block">
+    <div class="social-item">
+      <span
+        class="wishlist"
+        [ngClass]="{ passive: postData?.flame.indexOf(uid) === -1 }"
+        (click)="toggleFlame()"
+      >
+        <span class="count" *ngIf="postData?.flame?.length">{{
+          postData?.flame?.length
+        }}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="19.333"
+          height="18.014"
+          viewBox="475 859 19.333 18.014"
+        >
+          <path
+            d="m485.02 876.86-.353.154-.353-.154c-4.541-2.784-9.314-9.12-9.314-12.64.016-2.88 2.375-5.22 5.273-5.22 1.832 0 3.449.935 4.394 2.35a5.279 5.279 0 0 1 4.394-2.35c2.898 0 5.257 2.34 5.273 5.22 0 3.52-4.773 9.856-9.314 12.64Zm4.041-16.985a4.397 4.397 0 0 0-3.662 1.96l-.732 1.095-.732-1.096a4.397 4.397 0 0 0-3.662-1.96c-2.41 0-4.381 1.953-4.394 4.347 0 3.104 4.497 9.143 8.788 11.827 4.291-2.684 8.788-8.723 8.788-11.823-.013-2.398-1.984-4.35-4.394-4.35Z"
+            fill="#fff"
+            fill-rule="evenodd"
+            data-name="290111_favorite_heart_like_love_valentine_icon"
+          />
+        </svg>
+      </span>
+      <span
+        class="like"
+        [ngClass]="{ passive: postData?.likedBy.indexOf(uid) === -1 }"
+        (click)="toggleLike()"
+      >
+        <span class="count" *ngIf="postData?.likedBy?.length">{{
+          postData?.likedBy?.length
+        }}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16.333"
+          height="18.21"
+          viewBox="517 859 16.333 18.21"
+        >
+          <path
+            d="M520.345 877.21h-2.973c-.223 0-.372-.148-.372-.371V866.06c0-.223.186-.372.372-.372h2.973c.223 0 .371.186.371.372v10.778a.372.372 0 0 1-.371.371Zm-2.602-.743h2.23v-10.034h-2.23v10.034Zm8.845 0h-.78c-1.004-.037-2.193-.223-3.048-.334a6.248 6.248 0 0 0-1.003-.112c-.186 0-.335-.186-.335-.372v-8.807c0-.15.112-.298.223-.335l.186-.074c.855-.298 2.602-.966 3.494-1.933.966-1.003 1.412-2.378 1.412-4.013.037-.52.334-1.487 1.338-1.487.186 0 .409.037.669.111.037 0 .111.038.148.075.41.409 1.747 2.824.484 6.503h2.118c.149 0 1.263.038 1.71 1.45.074.186.371.966-.298 1.932.186.335.483 1.041.149 1.784-.037.075-.186.52-.483.818a2.294 2.294 0 0 1-.744 2.416c-.037.445-.223 1.486-1.115 1.858-.111.037-1.672.52-4.125.52Zm-4.385-1.152c.186.037.446.074.706.111.855.112 2.007.26 2.973.335 2.75.111 4.571-.483 4.571-.483.632-.26.632-1.338.632-1.338 0-.112.074-.223.149-.297 1.04-.744.557-1.859.557-1.933-.074-.186 0-.372.186-.483.149-.074.334-.409.409-.595.297-.669-.186-1.3-.186-1.3a.39.39 0 0 1 0-.484c.632-.743.372-1.337.372-1.375 0 0 0-.037-.038-.037-.297-.966-.966-1.003-1.003-1.003h-2.676c-.111 0-.223-.075-.297-.149a.361.361 0 0 1-.037-.334c1.3-3.382.26-5.686-.075-6.17-.148-.037-.26-.037-.334-.037-.52 0-.557.67-.557.744 0 1.82-.52 3.344-1.599 4.496-1.003 1.078-2.787 1.747-3.716 2.082v8.25Zm-3.345.409c-.223 0-.371-.149-.371-.372s.185-.372.371-.372a.4.4 0 0 1 .372.372.372.372 0 0 1-.372.372Z"
+            fill="#fff"
+            fill-rule="evenodd"
+            data-name="1169159_hand_like_media_social_thumbs_icon"
+          />
+        </svg>
+      </span>
+      <span class="share">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="17.75"
+          height="17.777"
+          viewBox="516 859 17.75 17.777"
+        >
+          <g data-name="430080_share_icon">
+            <path
+              d="M528.3 861.725a2.728 2.728 0 0 1 2.725-2.725 2.728 2.728 0 0 1 2.725 2.725 2.728 2.728 0 0 1-2.725 2.725 2.728 2.728 0 0 1-2.725-2.725Zm4.74 0a2.017 2.017 0 0 0-2.015-2.015 2.017 2.017 0 0 0-2.015 2.015c0 1.11.904 2.015 2.015 2.015 1.11 0 2.015-.904 2.015-2.015Z"
+              fill="#fff"
+              fill-rule="evenodd"
+              data-name="Path 101"
+            />
+            <path
+              d="M528.3 874.052a2.728 2.728 0 0 1 2.725-2.725 2.728 2.728 0 0 1 2.725 2.725 2.728 2.728 0 0 1-2.725 2.725 2.728 2.728 0 0 1-2.725-2.725Zm4.74 0c0-1.11-.904-2.015-2.015-2.015a2.017 2.017 0 0 0-2.015 2.015c0 1.111.904 2.015 2.015 2.015a2.017 2.017 0 0 0 2.015-2.015Z"
+              fill="#fff"
+              fill-rule="evenodd"
+              data-name="Path 102"
+            />
+            <path
+              d="M516 867.877a2.728 2.728 0 0 1 2.725-2.725 2.728 2.728 0 0 1 2.725 2.725 2.728 2.728 0 0 1-2.725 2.725 2.728 2.728 0 0 1-2.725-2.725Zm4.74 0a2.017 2.017 0 0 0-2.015-2.015 2.017 2.017 0 0 0-2.015 2.015c0 1.11.904 2.015 2.015 2.015a2.017 2.017 0 0 0 2.014-2.015Z"
+              fill="#fff"
+              fill-rule="evenodd"
+              data-name="Path 103"
+            />
+            <path
+              d="m529.025 862.977-7.99 4.517-.35-.618 7.99-4.517.35.618z"
+              fill="#fff"
+              fill-rule="evenodd"
+              data-name="Rectangle 53"
+            />
+            <path
+              d="m529.025 872.778-.349.618-7.99-4.516.348-.618 7.991 4.516z"
+              fill="#fff"
+              fill-rule="evenodd"
+              data-name="Rectangle 54"
+            />
+          </g>
+        </svg>
+      </span>
+    </div>
+    <div (click)="showComments()" class="respond-btn">
+      <div class="comments">{{ postData?.commentsCount }} Responses</div>
+      <button>
+        <i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="5.022"
+            height="9.276"
+            viewBox="1007.5 655 5.022 9.276"
+          >
+            <g data-name="g2054">
+              <path
+                d="m1007.5 659.638 5.022-4.638"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                stroke="#4169e1"
+                fill="transparent"
+                data-name="path2048"
+              />
+              <path
+                d="m1007.5 659.638 5.022 4.638"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                stroke="#4169e1"
+                fill="transparent"
+                data-name="path2050"
+              />
+            </g></svg
+        ></i>
+        Respond
+      </button>
+    </div>
+  </div>
+</div>

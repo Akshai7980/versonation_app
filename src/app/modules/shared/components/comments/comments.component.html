@@ -1,0 +1,55 @@
+<h2 mat-dialog-title>Responses</h2>
+
+<mat-dialog-content>
+  <ng-container *ngIf="comments.length">
+    <div class="card comments" *ngFor="let comment of comments">
+      <div
+        class="title"
+        *ngIf="comment?.user"
+        (click)="navigateToArtistProfile(comment.userId)"
+      >
+        <img
+          *ngIf="comment?.user?.profileImageUrl"
+          [src]="comment.user.profileImageUrl"
+        />
+        <img *ngIf="!comment?.user?.profileImageUrl" [src]="profileImg" />
+        <div class="label">
+          {{ comment.user?.name || comment.userName }}
+        </div>
+      </div>
+      <div class="content">
+        {{ comment.comment }}
+      </div>
+      <div class="subtitle">{{ comment.date | date : 'medium' }}</div>
+    </div>
+  </ng-container>
+  <div class="no-comments" *ngIf="!comments.length">No comments added</div>
+</mat-dialog-content>
+
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="submitComment()">
+  <input
+    mat-input
+    formControlName="comment"
+    placeholder="Add a comment"
+    type="text"
+  />
+  <button mat-button type="submit" transparent slot="end">
+    <svg
+      class="sent"
+      xmlns="http://www.w3.org/2000/svg"
+      id="Layer_1"
+      enable-background="new 0 0 24 24"
+      height="512"
+      viewBox="0 0 24 24"
+      width="512"
+    >
+      <path
+        d="m21.4472656 11.1054688-18-9c-.3603516-.1816406-.796875-.1269531-1.1025391.1386719s-.4208984.6884765-.2929687 1.0722656l2.5612183 7.6835937h7.3870239c.5527344 0 1 .4472656 1 1s-.4472656 1-1 1h-7.3870239l-2.5612183 7.6835938c-.1279297.3837891-.0126953.8066406.2929688 1.0722656.1855468.1611328.4199218.2441406.6552734.2441406.1523438 0 .3056641-.0351563.4472656-.1054688l18-9c.3388672-.1699218.5527344-.5156249.5527344-.8945312s-.2138672-.7246094-.5527344-.8945312z"
+      />
+    </svg>
+  </button>
+</form>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

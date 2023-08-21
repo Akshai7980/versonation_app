@@ -1,0 +1,46 @@
+<div class="wrapper">
+  <div class="navbar">
+    <a href="" class="brand-logo"
+      ><img src="../../../assets/images/logos/logo.png" alt=""
+    /></a>
+
+    <button
+      class="menu-icon"
+      mat-icon-button
+      aria-label="Example icon button with a menu icon"
+      (click)="toggleSideBar()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="collapse-menu" [ngClass]="status ? 'show-menu' : ''">
+      <div class="navbar-nav" (click)="toggleSideBar()">
+        <a (click)="loginAsGuest()" mat-button>Home</a>
+        <a mat-button routerLink="/streaming">Streaming</a>
+        <a mat-button routerLink="/static/help">Help</a>
+        <a mat-button routerLink="/static/about">About</a>
+        <a class="btn-link" (click)="isSignin = !isSignin" mat-button>Login</a>
+        <a class="btn-link" (click)="isSignin = !isSignin" mat-button
+          >Sign Up</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <section class="login-wrapper">
+    <div class="container">
+      <!-- sign in component here -->
+      <div *ngIf="isSignin">
+        <app-signin></app-signin>
+      </div>
+
+      <!-- sign up component here -->
+      <div *ngIf="!isSignin">
+        <app-signup></app-signup>
+      </div>
+    </div>
+    <div class="log-footer">© 2022 Verse nation, LLC. All rights reserved.</div>
+  </section>
+
+  <!-- <button routerLink="/home">Click to Navigate to Home Module</button> -->
+</div>

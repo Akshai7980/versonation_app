@@ -1,0 +1,93 @@
+.account-invite-wrapper{
+    label{
+        color: #1d1d1d;
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .search-block{
+        position: relative;
+        width: 400px;
+        button{
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        background: transparent;
+        border: 0;
+        }
+    }
+    .suggestions-block{
+        margin-bottom: 20px;
+        width: 800px; 
+        .title{
+            margin-bottom: 20px;
+            h3{
+                color: #1d1d1d;
+                font-size: 18px;
+            }
+        }
+        .list-item{
+            box-shadow: 0px 7px 14px rgb(65 69 88 / 10%), 0px 3px 6px rgb(0 0 0 / 7%);
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .btn-wrap{
+            margin-top: 25px;
+        }
+    }
+    .invite-block{
+        .title{
+            margin-bottom: 20px;
+            h3{
+                color: #1d1d1d;
+                font-size: 18px;
+            }
+        }
+    }
+    .btn{
+
+            background-color: #4169e1;
+            padding: 18px 30px;
+            border: 0;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 18px;
+            display: inline-block;
+      
+    }
+}
+.inviteRow{
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    align-items: center; 
+}
+
+.listItems{ 
+    margin-bottom: 4px;
+    
+    li{
+        list-style: none;
+        font-size: 16px;
+    } 
+}
+.listItem{ 
+    width: 40%;
+    height: auto; 
+    padding-left: 10px;
+    border: 1px solid #4169e1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+     
+}
+.addBtn{
+    border: 1px solid #cbcbcb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+

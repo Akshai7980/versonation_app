@@ -1,0 +1,46 @@
+<div class="trending-albums-block">
+    <!-- <div class="row">
+      <div class="col-12">
+        <div class="title">
+          <h2>Trending</h2>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="item-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <div class="sub-title">
+                    <h4>Watchlist</h4>
+                    <div class="arrow-block">
+                        <span>
+                            <img src="../../../assets/images/icons/arrow-left.svg" />
+                        </span>
+                        <span>
+                            <img src="../../../assets/images/icons/arrow-right.svg" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty data handler -->
+        <div *ngIf="artists?.length === 0 && dataLoaded">
+            <app-no-data-found></app-no-data-found>
+        </div>
+
+        <!-- If any artist data is available , show tiled view -->
+        <div class="row" *ngIf="artists.length > 0">
+            <div class="col-xs-12 col-sm-3 col-3" *ngFor="let art of artists" (click)="openArtistDetails(art)">
+                <div class="item">
+                    <figure><img [src]="art.Image" /></figure>
+                    <div class="content">
+                        <h4>{{ art?.name ? art.name : "--" }}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

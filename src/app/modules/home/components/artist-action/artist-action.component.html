@@ -1,0 +1,260 @@
+<div class="auction-tab-wrapper">
+
+    <mat-tab-group>
+        <mat-tab label="All Auctions">
+            <div style="margin-top:20px;" class="tab-container">
+
+                <div class="row slect-item">
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Type</mat-label>
+                            <mat-select [(ngModel)]="typeValue" name="type">
+                              <mat-option *ngFor="let type of types" [value]="type">
+                                {{type}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Licence uses type</mat-label>
+                            <mat-select [(ngModel)]="useTypeValue" name="use">
+                              <mat-option *ngFor="let use of types" [value]="use">
+                                {{use}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div> 
+
+
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Licence Term</mat-label>
+                            <mat-select [(ngModel)]="userTermValue" name="term">
+                              <mat-option *ngFor="let term of licenceTerms" [value]="term">
+                                {{term}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <!-- <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Sort</mat-label>
+                            <mat-select [(ngModel)]="sortValue" name="sort">
+                              <mat-option *ngFor="let sort of sort" [value]="sort">
+                                {{sort}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div> -->
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Time</mat-label>
+                            <mat-select [(ngModel)]="timeValue" name="time">
+                              <mat-option *ngFor="let time of time" [value]="time">
+                                {{time}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Price</mat-label>
+                            <mat-select [(ngModel)]="priceValue" name="price">
+                              <mat-option *ngFor="let price of price" [value]="price">
+                                {{price}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>  
+                </div>
+                <form [formGroup]="filterForm" class="row slect-item togglebar">
+                    <mat-slide-toggle  formControlName="live">Live</mat-slide-toggle>
+                    <mat-slide-toggle formControlName="upcoming">Upcoming</mat-slide-toggle>
+                    <mat-slide-toggle formControlName="closed">Recently closed</mat-slide-toggle>
+                    
+                   
+                    
+                </form>
+
+                <!-- <div class="row slect-item">
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Sort</mat-label>
+                            <mat-select [(ngModel)]="sortValue" name="sort">
+                              <mat-option *ngFor="let sort of sort" [value]="sort">
+                                {{sort}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Time</mat-label>
+                            <mat-select [(ngModel)]="timeValue" name="time">
+                              <mat-option *ngFor="let time of time" [value]="time">
+                                {{time}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Price</mat-label>
+                            <mat-select [(ngModel)]="priceValue" name="price">
+                              <mat-option *ngFor="let price of price" [value]="price">
+                                {{price}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div> 
+                    </div> -->
+
+                 
+
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                        <app-artist-list-item></app-artist-list-item>
+                    </div>
+
+                </div>
+            </div>
+        </mat-tab>
+
+
+        <mat-tab label="My Auctions ">
+            <div class="tab-container">
+
+                <div class="row slect-item">
+                    <div class="item">
+                        <select matNativeControl required>
+                            <option value="volvo">Type</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <select matNativeControl required>
+                            <option value="volvo">Time Left</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class=" item">
+                        <select matNativeControl required>
+                            <option value="volvo">Licence uses type</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="item"> <select>
+                            <option value="0">Licence Term</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select></div>
+                    <div class="item"> <select>
+                            <option value="0">Start selling price</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select></div>
+                </div>
+
+
+                <div class="">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <div class="card-item" (click)="postAuction()">
+                                
+                                <div class="card">
+                                    <figure class="plus-icon">
+                                        <i> 
+                                            <img src="../../../assets/images/icons/plus-icon.svg" />
+                                        </i>
+                                    </figure>
+                                </div>
+                                <h5>Post Auction</h5>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4  col-lg-4 col-4">
+                            <app-artist-list-item></app-artist-list-item>
+                        </div>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </mat-tab>
+        
+
+    </mat-tab-group>
+</div> 
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+

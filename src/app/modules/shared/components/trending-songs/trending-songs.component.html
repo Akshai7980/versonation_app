@@ -1,0 +1,88 @@
+<div class="item-wrapper">
+  <div class="row">
+    <div class="col-12">
+      <div class="sub-title">
+        <h4>Songs</h4>
+        <div class="arrow-block">
+          <span>
+            <img src="../../../assets/images/icons/arrow-left.svg" />
+          </span>
+          <span>
+            <img src="../../../assets/images/icons/arrow-right.svg" />
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-3 col-3" *ngFor="let song of songs">
+      <div class="item" (click)="getItem(song)">
+        <figure>
+          <img [src]=" song.image " />
+        </figure>
+        <div class="content">
+          <h4> {{ song.name }} </h4>
+          <p>
+            It is a long established
+            fact that a reader will
+            be distracted by the
+            readable content of
+            a page when looking.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-xs-12 col-sm-3 col-3">
+      <div class="item">
+        <figure>
+          <img src="../../../assets/images/streaming/song-2.png" />
+        </figure>
+        <div class="content">
+          <h4>Droke</h4>
+          <p>
+            It is a long established
+            fact that a reader will
+            be distracted by the
+            readable content of
+            a page when looking.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-3">
+      <div class="item">
+        <figure>
+          <img src="../../../assets/images/streaming/song-3.png" />
+        </figure>
+        <div class="content">
+          <h4>Droke</h4>
+          <p>
+            It is a long established
+            fact that a reader will
+            be distracted by the
+            readable content of
+            a page when looking.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-3">
+      <div class="item">
+        <figure><img src="../../../assets/images/streaming/song-4.png" /></figure>
+        <div class="content">
+          <h4>Droke</h4>
+          <p>
+            It is a long established
+            fact that a reader will
+            be distracted by the
+            readable content of
+            a page when looking.
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</div>

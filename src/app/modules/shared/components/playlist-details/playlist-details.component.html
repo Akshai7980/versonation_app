@@ -1,0 +1,37 @@
+<app-header-with-sidenav>
+  <div class="mainContainer">
+    <div class="flexContainer">
+
+      <div class="imgContainer">
+        <img [src]="playListDetails?.Image" alt="" />
+      </div>
+
+      <div class="artistDet">
+        <h1>{{playListDetails?.name}}</h1>
+
+        <div class="flexContainer1">
+          <p>{{playListDetails.songs?.length}} Songs • 0+ Hours</p>
+        </div>
+
+        <div class="flexContainer2">
+          <button class="shuffle_button">
+            <img src="../../../../../assets/images/icons/shuffle.png" alt="">
+            SHUFFLE
+          </button>
+          <button class="edit_playlist_button">
+            <img src="../../../../../assets/images/icons/edit.png" alt="">
+            EDIT PLAYLIST
+          </button>
+          <div>
+            <img class="moreIcon" src="../../../../../assets/images/icons/more.png" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="containerForSongsList">
+      <app-songs-list [songs]="songsList"></app-songs-list>
+    </div>
+  </div>
+</app-header-with-sidenav>

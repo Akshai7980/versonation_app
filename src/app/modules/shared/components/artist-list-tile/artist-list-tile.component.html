@@ -1,0 +1,33 @@
+<div class="item-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <div class="sub-title">
+                <h4>Artists</h4>
+                <div class="arrow-block">
+                    <span>
+                        <img src="../../../assets/images/icons/arrow-left.svg" (click)="onClickPrev()" />
+                    </span>
+                    <span>
+                        <img src="../../../assets/images/icons/arrow-right.svg" (click)="onClickNext()"/>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 col-3" *ngFor="let artist of topArtists.slice(prevCount, nextCount)" (click)="onClickArtist(artist)">
+            <div class="item">
+                <figure>
+                    <img [src]="artist.Image" />
+                </figure>
+                <div class="content">
+                    <h4>{{ artist?.name ? artist.name : '--' }}</h4>
+                    <p>
+                        It is a long established fact that a reader will be distracted by
+                        the readable content of a page when looking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

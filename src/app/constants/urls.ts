@@ -1,0 +1,2 @@
+export const PLAY_STORE_URL = 'https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7CONSEM_kwid_43700065205026376_creativeid_535350509651_device_c&gclid=Cj0KCQiAqOucBhDrARIsAPCQL1ZXTn2wrXK2eoL83XG8trEXBFWzplKmkmdC89mt3ZoZ74i-7kpekykaAndPEALw_wcB&gclsrc=aw.ds';
+export const APP_STORE_URL = 'https://www.apple.com/in/app-store/';

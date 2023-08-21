@@ -1,0 +1,22 @@
+<div class="shadow-box item-block stream-right-block">
+
+  <div class="content-item" *ngFor="let artist of artists" (click)="onClickArtist(artist)">
+    <div *ngIf="artist.show">
+      <figure>
+        <img [src]=" artist?.Image ? artist.Image : '../../../assets/images/streaming/song-01.png'" />
+      </figure>
+      <div class="content">
+        <div class="sub-title">
+          <h5> {{ artist?.name ? artist.name : "--" }} </h5>
+          <h6> Followers : {{ artist?.followersCount ? artist.followersCount : "0" }} </h6>
+        </div>
+
+        <p>It is a long established
+          fact that a reader will
+          be distracted by the
+          readable content of
+          a page when looking.</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="list-item">
+  <figure>
+    <img *ngIf="artistData?.Image" (click)="navigateToProfile(artistData)" [src]="artistData.Image" alt="" />
+    <img
+      *ngIf="!artistData?.Image"
+      src="../../../assets/images/pic/profile.jpg"
+      alt=""
+    />
+  </figure>
+  <div class="content">
+    <h6>{{ artistData.name }}</h6>
+    <a
+      *ngIf="action === 'follow' && artistData.id !== user?.uid"
+      (click)="followArtist()"
+      >{{ isFollowed ? 'Unfollow' : 'Follow' }}</a
+    >
+  </div>
+</div>

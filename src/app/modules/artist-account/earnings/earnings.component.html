@@ -1,0 +1,93 @@
+<div class="main-wrapper">
+    <div class="main-content-wrapper w-full">
+            <div class="shadow-box-lg earnings-wrapper">
+                        <form [formGroup]="earningForm">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-2">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Income</mat-label>
+                                        <input matInput placeholder="$124" formControlName="income" />
+                                      </mat-form-field>  
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-2">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Withdrawn</mat-label>
+                                        <input matInput placeholder="$124" formControlName="withdrawn" />
+                                      </mat-form-field>  
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-2">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Available for withdraw</mat-label>
+                                        <input matInput placeholder="$124" formControlName="availableForWithdraw" />
+                                      </mat-form-field>  
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-2">
+                                    <mat-form-field appearance="outline" class="mr-10">
+                                        <mat-label>Paid</mat-label>
+                                        <input matInput placeholder="$124" formControlName="paid" />
+                                      </mat-form-field>  
+                                </div>
+                                <div class="col-12">
+                                    <div class="title">
+                                        <h3>Withdraw</h3>
+                                    </div>
+                                    <div class="checkbox-block">
+                                        <div class="mr-20">
+                                            <i>
+                                                <img src="../../../../assets/images/icons/bank.png" />
+                                            </i>
+                                            <mat-radio-button class="radio-button" value="rapper">
+                                              
+                                                Bank Transfer</mat-radio-button>
+                                        </div>
+                                        <div class="mr-20">
+                                            <i>
+                                                <img src="../../../../assets/images/icons/paypal.png" />
+                                            </i>
+                                            <mat-radio-button class="radio-button" value="rapper">Pay Pal</mat-radio-button></div>
+                                        <div class="mr-20">
+                                            <i>
+                                                <img src="../../../../assets/images/icons/card.png" />
+                                            </i>
+                                            <mat-radio-button class="radio-button" value="rapper">Transfer to Credit/ Debit card</mat-radio-button></div>
+                                    </div>
+                                    <div class="title">
+                                        
+                                        <h3>Transactions</h3>
+                                        <select>
+                                            <option>Filter</option>
+                                            <option>Filter</option>
+                                            <option>Filter</option>
+                                        </select>
+                                    </div>
+        
+                                    <div class="table">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Date </td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>10/05/2022</td>
+                                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10/05/2022</td>
+                                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10/05/2022</td>
+                                                    <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+    </div>
+</div>

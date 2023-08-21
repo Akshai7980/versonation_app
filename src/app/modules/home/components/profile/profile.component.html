@@ -1,0 +1,4 @@
+ 
+            <app-artist-profile-block [isEdit]="isTimeline" [uid]="_uid" [profileData]="profileData"></app-artist-profile-block>
+            <app-tab-component [isEdit]="isTimeline" [uid]="_uid"  [postData]="posts" (refreshPosts)="getPosts()"></app-tab-component>
+     

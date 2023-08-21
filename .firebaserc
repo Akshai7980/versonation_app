@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "verse-nation": {
+      "hosting": {
+        "versenationweb": [
+          "verse-nation"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "verse-nation"
+  }
+}

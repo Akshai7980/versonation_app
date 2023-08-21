@@ -1,0 +1,100 @@
+<div class="modal-wrapper">
+  <h2>Profile Details</h2>
+  <form [formGroup]="profileForm">
+    <div class="input_group">
+      <div class="single_input">
+        <input type="text" class="input_style require_fields" formControlName="name"   placeholder=" ">
+        <label class="floating_label_field">Name<span class="required">*</span></label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <select name="" id="" class="input_style" formControlName="gender" >
+          <option value="" selected disabled>Select category type</option>
+          <option value="f">Female</option>
+          <option value="m">Male</option>
+          <option value="b">Non-binary</option>
+      </select>
+        <label class="floating_label_field">Gender </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <input type="date" class="input_style require_fields" formControlName="dob"  placeholder=" ">
+        <label class="floating_label_field">Date of Birth</label>
+        <span class="error_msg"></span>
+      </div>
+
+      
+      <div class="single_input">
+        <input type="text" class="input_style require_fields" formControlName="bestdescription" placeholder=" ">
+        <label class="floating_label_field">Best Describes You </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input bio_input">
+        <textarea type="text" class="input_style require_fields" rows="5"  formControlName="bio"  placeholder=" "></textarea>
+        <label class="floating_label_field">Bio </label>
+        <span class="error_msg"></span>
+      </div>
+      
+      <div class="single_input">
+        <input type="text" class="input_style require_fields"  formControlName="work" placeholder=" ">
+        <label class="floating_label_field">Work </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <input type="text" class="input_style require_fields"  formControlName="contact" placeholder=" ">
+        <label class="floating_label_field">Contact </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <input type="text" class="input_style require_fields"  formControlName="address" placeholder=" ">
+        <label class="floating_label_field">Address </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <input type="text" class="input_style require_fields"  formControlName="city" placeholder=" ">
+        <label class="floating_label_field">City </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <input type="text" class="input_style require_fields" formControlName="state"  placeholder=" ">
+        <label class="floating_label_field">State </label>
+        <span class="error_msg"></span>
+      </div>
+
+      <div class="single_input">
+        <input type="text" class="input_style require_fields" formControlName="zip"  placeholder=" ">
+        <label class="floating_label_field">Zip </label>
+        <span class="error_msg"></span>
+      </div>
+    </div>
+ </form>
+  <div class="slect-geners">
+    <h4>Select Geners</h4>
+    <div class="genrs-list">
+      <div *ngFor="let item of genresList;let i=index" class="geners" >
+        {{item.name}}
+        <svg (click)="removeGenre(i)" xmlns="http://www.w3.org/2000/svg" height="329pt" viewBox="0 0 329.26933 329" width="329pt"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+      </div>
+    </div>
+    <div class="search">
+      <div class="search-genrs">
+        <input [(ngModel)]="searchedGenre" (keyup)="filterGenre()" type="text" placeholder="Search genres ...">
+      </div>
+      <cdk-virtual-scroll-viewport *ngIf="isGenreAvailable" class="item-modal" itemSize="50">
+        <div *ngFor="let genre of filteredGenres" class="item" (click)="addGenre(genre)">
+          {{genre.name}}
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </div>
+  </div>
+ <div class="action-btn" (click)="updateProfile()">
+    <button>Update</button>
+ </div>
+</div>

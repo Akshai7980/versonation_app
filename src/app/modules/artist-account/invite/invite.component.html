@@ -1,0 +1,85 @@
+<div class="main-wrapper">
+    <div class="main-content-wrapper">
+        <div class="shadow-box-lg account-invite-wrapper">
+            <label>Invite for Die Hard Members</label>
+            <div class="search-block">
+                <mat-form-field appearance="outline">
+                    <input matInput placeholder="Search Die Hard Member" />
+                </mat-form-field>
+                <button>
+                    <img src="../../../assets/images/icons/search.png" />
+                </button>
+            </div>
+
+            <div class="suggestions-block">
+                <div class="title">
+                    <h3>Suggestions</h3>
+                </div>
+                <div class="row">
+                    <div *ngFor="let artist of artistList " class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-4"> 
+                        <app-artist-list-with-action 
+                          [artistData]="artist"></app-artist-list-with-action>
+                    </div>
+
+ 
+
+
+                </div>
+                <div class="btn-wrap mb-16">
+                    <button type="submit" class="btn" (click)="showMore()">{{showMoreArtist?'Show Less':'Show More'}}</button>
+                </div>
+            </div>
+
+            <div class="invite-block">
+                <div class="title">
+                    <h3>Invite for Verse Nation</h3>
+                </div>
+                <div  class="row inviteRow">
+                    <form [formGroup]="form" class="col-xs-12 col-sm-4 col-4">
+                        <mat-form-field appearance="outline" class="mr-10">
+                            <mat-label>Invite Artist</mat-label>
+                            <input formControlName="email" matInput placeholder="Email or Phone Number" />
+                        </mat-form-field>
+                    </form>
+
+                    
+                    <form [formGroup]="artistForm" class="col-xs-12 col-sm-4 col-4">
+                        <mat-form-field appearance="outline" class="mr-10">
+                            <mat-label>Invite Artist</mat-label>
+                            <input formControlName="name" matInput placeholder="Artist Name" />
+                        </mat-form-field>
+                    </form>
+                    <div class="col-xs-12 col-sm-4 col-4 ">
+                        <!-- <button class="btn" (click)="add()">Add to List</button> -->
+                        <button mat-icon-button color="primary" class="addBtn" aria-label="Example icon button with a home icon"
+                        (click)="add()">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                    </div>
+
+
+                </div>
+
+                <div class="listItems" *ngFor="let item of linkList; let i = index">
+                    <div class="listItem">
+                       <li *ngIf="item.name">{{item.name}}</li>
+                        <li *ngIf="item.email">{{item.email}}</li>  
+
+                        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon"
+                        (click)="removeItem(i)">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </div>
+                    
+                    
+                     
+                </div>
+                <div class="btn-wrap mb-16">
+                    <button (click)="sendLink()" type="submit" class="btn">INVITE</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

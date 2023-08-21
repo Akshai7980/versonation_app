@@ -1,0 +1,18 @@
+<div>
+  <h1>New Playlist</h1>
+
+  <form class="example-form" [formGroup]="playListForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Title" formControlName="name" />
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-full-width">
+      <input matInput placeholder="Description" formControlName="description" />
+    </mat-form-field> -->
+
+    <div class="buttonContainer">
+      <button (click)="toClose()">Cancel</button>
+      <button (click)="toCreatePlaylist()">Create</button>
+    </div>
+  </form>
+</div>

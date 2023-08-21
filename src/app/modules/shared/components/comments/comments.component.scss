@@ -1,0 +1,74 @@
+mat-dialog-content {
+  padding-top: 10px;
+  background: white;
+}
+
+.card {
+  padding: 0 5px;
+  margin: 5px 10px;
+  box-shadow: none;
+
+  .title {
+    display: flex;
+    gap: 10px;
+    color: gray;
+    -webkit-box-align: center;
+    align-items: center;
+
+    .label {
+      font-size: 15px;
+      font-weight: 100;
+    }
+  }
+  .subtitle {
+    text-transform: capitalize;
+    font-size: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d4d4d4;
+    text-align: end;
+    color: gray;
+  }
+  .content {
+    padding: 5px;
+    margin-left: 40px;
+    font-size: 18px;
+    color: black;
+  }
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  border-radius: 30px;
+  padding: 0px 10px;
+  align-items: center;
+  button {
+    height: 40px;
+    width: 60px;
+    padding-right: 0;
+
+    .sent {
+      height: 31px;
+      width: 28px;
+    }
+  }
+}
+
+.no-comments {
+  text-align: center;
+  margin-top: 50px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50% !important;
+  overflow: hidden;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  width: 100%;
+}

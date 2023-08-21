@@ -1,0 +1,60 @@
+.songContainer {
+  display: inline-flex;
+  width: 98%;
+  height: 50px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.removeBorderBottom {
+  border-bottom: unset;
+}
+
+.songThumbnail {
+  position: relative;
+  width: 6%;
+  img {
+      position: absolute;
+      width: 80%;
+      height: 68%;
+      // margin: 8px 0px 0px 8px;
+      top: 8px;
+  }
+}
+
+.songName {
+  width: 35%;
+  margin: 15px 0 0 4px;
+}
+
+.artist {
+  width: 50%;
+  margin: 15px 0 0 4px;
+}
+
+.duration {
+  width: 9%;
+  margin: 15px 4px 0 0;
+  text-align: right;
+}
+
+.play_icon {
+  position: absolute;
+  cursor: pointer;
+  top: 14px !important;
+  left: 13px;
+  width: 26px !important;
+  height: 22px !important;
+}
+
+.songThumbnail .musicIcon:hover {
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+.no-data{
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkgray;
+}

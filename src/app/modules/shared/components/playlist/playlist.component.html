@@ -1,0 +1,49 @@
+<div class="trending-albums-block">
+
+  <div class="item-wrapper">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-title">
+          <h4>Recent Playlist</h4>
+          <div class="arrow-block">
+            <span>
+              <img src="../../../assets/images/icons/arrow-left.svg" (click)="onClickPrev()"/>
+            </span>
+            <span>
+              <img src="../../../assets/images/icons/arrow-right.svg" (click)="onClickNext()" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <div class="col-xs-12 col-sm-3 col-3">
+            <div class="card-item" (click)="openCreatePlaylist()">
+                
+                <div class="card">
+                    <figure class="plus-icon">
+                        <i> 
+                            <img src="../../../assets/images/icons/plus-icon.svg" />
+                        </i>
+                    </figure>
+                </div>
+                <div class="content">
+                  <h4>Create Playlist</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-3" *ngFor="let list of playLists.slice(prevCount, nextCount)" (click)="onClickArtist(list)">
+          <div class=" item">
+            <figure><img [src]="list?.Image" /></figure>
+            <div class="content">
+              <h4>{{ list?.name ? list.name : "--" }}</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

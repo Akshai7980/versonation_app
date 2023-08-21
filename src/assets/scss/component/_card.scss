@@ -1,0 +1,80 @@
+.card-item{
+    .card{
+        box-shadow: 0px 7px 14px rgb(65 69 88 / 10%), 0px 3px 6px rgb(0 0 0 / 7%);
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        margin-bottom: 20px;
+        border: solid 2px transparent;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+            border: solid 2px #4169E1;
+           
+        }
+        .card-title{
+            margin-bottom: 10px;
+            h4{
+                color: $title-color;
+                font-weight: 500;
+                font-size: 14px;
+                margin: 0;
+            }
+            span{
+                color: #5e5e5e;
+                font-size: 13px;
+            }
+        }
+    
+        figure{
+            height: 185px;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .view{
+            display: flex;
+            align-items: center;
+            i{
+                margin-right: 3px;
+                img{
+                    width: 20px;
+                }
+            }
+            color: #5e5e5e;
+            font-size: 13px;
+        }
+        .time{
+            display: flex;
+            align-items: center;
+            i{
+                margin-right: 3px;
+                img{
+                    width: 14px;
+                }
+            }
+            color: #5e5e5e;
+            font-size: 13px;
+        }
+        .price{
+            color: #1d1d1d;
+            font-size: 17px;
+        }
+    
+        .plus-icon{
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          i{
+            width: 46px;
+            height: 46px;
+          }
+        }
+    }
+    h5{
+        text-align: center;
+        font-size: 20px;
+    }
+}

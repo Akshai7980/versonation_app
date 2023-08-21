@@ -1,0 +1,109 @@
+
+.main{
+    .custom_icons{
+        position: absolute;
+        margin-left: 250px;
+        margin-top: 20px;
+        img{
+            height: 20px;
+            cursor: pointer;
+        }
+        span{
+            margin-right: 10px;
+        }
+    }
+    .loading{
+        width: fit-content;
+        position: absolute;
+        margin-left: 50%;
+        margin-top: 42px;
+        font-size: 15px;
+    }
+    display: flex;
+    .container_player{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100px;
+    }
+    
+    .right_div{
+        position: absolute;
+        right: 0;
+        margin-right: 50px;
+        margin-top: 25px;
+        cursor: pointer;
+       p{
+        font-weight: 400;
+        font-size: 20px;
+        img{
+            height: 20px;
+            background: #c8cdff;
+            border-radius: 50%;
+            padding: 3px;
+            width: 20px;
+        }
+       }
+    }
+}
+
+
+
+::ng-deep .wrapper .cover img{
+    border-radius: 0px !important;
+    margin-left: 10px !important;
+    max-height: 50px !important;
+    max-width: 50px !important;
+    margin-top: 30px !important;
+}
+
+::ng-deep .wrapper .container .details .title{
+    color: #4c82af;
+    margin: 7px 0 15px;
+    width: fit-content;
+    position: absolute;
+    left: 0;
+    margin-left: 81px !important;
+}
+
+::ng-deep .wrapper .container .controls{
+    display: flex !important;
+    flex-basis: auto !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    /* justify-content: space-around; */
+    margin-top: 8px !important;
+}
+
+::ng-deep .wrapper .container {
+    width: auto !important;
+}
+
+::ng-deep .slidecontainer{
+    position: absolute;
+    width: 390px !important;
+    bottom: 0;
+}
+
+::ng-deep .slider{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 11px;
+}
+
+::ng-deep .time-line{
+    width: 435px !important;
+}
+
+::ng-deep .wrapper .container .volume-container .volume-control{
+    // display: none !important;
+    height: 32px !important;
+    position: absolute !important;
+    top: 0px !important;
+    transform: rotate(180deg) !important;
+    width: 100px !important;
+    bottom: 0 !important;
+    margin-bottom: 10px !important;
+    margin-left: 50px !important;
+}
+

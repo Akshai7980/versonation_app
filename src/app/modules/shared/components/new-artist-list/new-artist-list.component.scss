@@ -1,0 +1,13 @@
+.stream-right-block{
+    .content-item{
+        display: flex;
+        figure{
+            width: 250px;
+            height: 150px;
+            margin-right: 15px;
+        }
+        .content{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.slect-item{
+    display: flex;
+    // margin-bottom: 20px;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 20px; 
+    padding-top: 0;
+    padding-bottom: 0; 
+    gap: 4px;
+    .item{
+        width: 19.2%;
+        select{
+            border: 0;
+            font-size: 15px;
+        }
+    }
+}
+.card-item{
+    cursor: pointer;
+}
+.togglebar{ 
+    width: 100%;
+    padding: 16px; 
+    display: flex;
+    gap: 32px;
+    justify-content: end;
+    // float: right;
+}
+mat-slider {
+    width: 300px;
+  }

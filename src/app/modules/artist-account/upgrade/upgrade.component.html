@@ -1,0 +1,126 @@
+<div class="main-wrapper">
+  <div class="artist-account-list-wrapper">
+    <div class="row container">
+      <div *ngFor="let plan of upgradePlans; let i = index">
+        <div class="col-12 col-md-3 col-lg-3">
+          <div class="list-block list-block-1">
+            <div class="title title1">
+              <h3>{{ plan.free.title }}</h3>
+            </div>
+            <div class="box">
+              <div *ngFor="let feature of plan.free.features">
+                <div *ngIf="feature.avalability" class="items">
+                  <div class="feature">
+                    <i><img src="../../../assets/images/icons/tick-icon.svg" /></i>
+                    <span>{{ feature.feature }}</span>
+                  </div>
+
+                  <div class="sub_feature" *ngFor="let sub of feature.sub_feature">
+                    <li></li>
+                    {{ sub.sub }}
+                  </div>
+                </div>
+
+                <div *ngIf="!feature.avalability" class="items">
+                  <div class="feature">
+                    <i><img src="../../../assets/images/icons/close-icon.svg" /></i>
+                    <del>{{ feature.feature }}</del>
+                  </div>
+                  <div class="sub_feature" *ngFor="let sub of feature.sub_feature">
+                    <li></li>
+                    {{ sub.sub }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="priceBtn">Get Started <br /></button>
+          </div>
+        </div>
+
+        <!-- advance -->
+        <div class="col-12 col-md-3 col-lg-3">
+          <div class="list-block list-block-1">
+            <div class="title title1">
+              <h3>{{ plan.plus.title }}</h3>
+            </div>
+            <div class="box">
+              <div *ngFor="let feature of plan.plus.features">
+                <div *ngIf="feature.avalability" class="items">
+                  <div class="feature">
+                    <i><img src="../../../assets/images/icons/tick-icon.svg" /></i>
+                    <span>{{ feature.feature }}</span>
+                  </div>
+
+                  <div class="sub_feature" *ngFor="let sub of feature.sub_feature">
+                    <li></li>
+                    {{ sub.sub }}
+                  </div>
+                </div>
+
+                <div *ngIf="!feature.avalability" class="items">
+                  <div class="feature">
+                    <i><img src="../../../assets/images/icons/close-icon.svg" /></i>
+                    <del>{{ feature.feature }}</del>
+                  </div>
+                  <div class="sub_feature" *ngFor="let sub of feature.sub_feature">
+                    <li></li>
+                    {{ sub.sub }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="priceBtn">
+              Upgrade <br />
+              <span class="price">{{ plan.plus.price.monthly }}/Month |
+                <span class="yearprice">{{plan.plus.price.yearly}}/Year</span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3 col-lg-3">
+          <div class="list-block list-block-1">
+            <div class="title title1">
+              <h3>{{ plan.advanced.title }}</h3>
+            </div>
+            <div class="box">
+              <div *ngFor="let feature of plan.advanced.features">
+                <div *ngIf="feature.avalability" class="items">
+                  <div class="feature">
+                    <i><img src="../../../assets/images/icons/tick-icon.svg" /></i>
+                    <span>{{ feature.feature }}</span>
+                  </div>
+
+                  <div class="sub_feature" *ngFor="let sub of feature.sub_feature">
+                    <li></li>
+                    {{ sub.sub }}
+                  </div>
+                </div>
+
+                <div *ngIf="!feature.avalability" class="items">
+                  <div class="feature">
+                    <i><img src="../../../assets/images/icons/close-icon.svg" /></i>
+                    <del>{{ feature.feature }}</del>
+                  </div>
+                  <div class="sub_feature" *ngFor="let sub of feature.sub_feature">
+                    <li></li>
+                    {{ sub.sub }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="priceBtn">
+              Upgrade <br />
+              <span class="price">{{ plan.advanced.price.monthly }}/Month
+                |
+                <span class="yearprice">{{plan.advanced.price.yearly}}/Year</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

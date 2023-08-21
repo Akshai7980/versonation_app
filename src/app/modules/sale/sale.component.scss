@@ -1,0 +1,16 @@
+.slect-item{
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #e5e5e5;
+    padding: 20px;
+    .item{
+        width: 100%;
+        select{
+            border: 0;
+            font-size: 15px;
+        }
+    }
+}
+.card-item{
+    cursor: pointer;
+}

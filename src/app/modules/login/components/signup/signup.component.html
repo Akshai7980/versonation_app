@@ -1,0 +1,214 @@
+<!-- <p>signup works!</p> -->
+<div class="content-wrapper" *ngIf="!isSignin">
+  <h2 class="title text-center">SIGN UP</h2>
+  <div class="log-reg-box reg-box">
+    <div class="logo-wrap mx-auto">
+      <img
+        src="../../../../../assets/images/logos/logo.png"
+        class="logo"
+        alt=""
+      />
+    </div>
+    <h2 class="title text-center">SIGN UP</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="signUp()">
+      <div class="name-grid">
+        <mat-form-field appearance="outline" class="mr-10">
+          <mat-label>First name</mat-label>
+          <input matInput placeholder="Eg: John" formControlName="firstName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Eg: Doe" formControlName="lastName" />
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            placeholder="Eg:mail@example.com"
+            formControlName="email"
+          />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Eg:abc123@"
+            formControlName="password"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon class="visibility-icon">{{
+              hide ? 'visibility_off' : 'visibility'
+            }}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="loc-det-grid">
+        <mat-form-field appearance="outline" class="mr-10">
+          <mat-label>City</mat-label>
+          <input
+            matInput
+            placeholder="Eg: Los Angeles"
+            formControlName="city"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>State</mat-label>
+          <mat-select (selectionChange)="onSelectState($event)">
+            >
+            <mat-option [value]="item.name" *ngFor="let item of states">
+              {{ item.abbreviation }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Zip code</mat-label>
+          <input matInput placeholder="Eg: 36925" formControlName="zipCode" />
+        </mat-form-field>
+      </div>
+
+      <div class="d-flex acc-wrap">
+        <mat-form-field appearance="outline" class="acc-select">
+          <mat-label>Account type</mat-label>
+          <mat-select (selectionChange)="onSelectAccountType($event)">
+            <mat-option
+              [value]="item.account"
+              *ngFor="let item of accountsType"
+            >
+              {{ item.account }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="acc-field">
+          <mat-label>Gender</mat-label>
+          <mat-select (selectionChange)="onSelectGenderType($event)">
+            <mat-option
+              [value]="item.account"
+              *ngFor="let item of genderType"
+            >
+              {{ item.account }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Bio</mat-label>
+          <textarea
+            rows="5"
+            matInput
+            placeholder="Eg: lorem ipsum dolor sit amet."
+            formControlName="bio"
+          ></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="det-grid">
+        <div class="content-wrap">
+          <div class="det-wrap">
+            <h4 class="det-title">Best Describes You</h4>
+            <div>
+              <mat-radio-group
+                class="det-content-wrap"
+                aria-label="Select an option"
+                formControlName="bestDescribesYou"
+              >
+                <mat-radio-button class="radio-button" value="rapper"
+                  >Rapper</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="singer"
+                  >Singer</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="guitarist"
+                  >Guitarist</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="producer"
+                  >Producer</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="ghostwriter"
+                  >Ghostwriter</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="composer"
+                  >Composer</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="engineer"
+                  >Engineer</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="songwriter"
+                  >Songwriter</mat-radio-button
+                >
+                <mat-radio-button class="radio-button" value="custom"
+                  >Custom</mat-radio-button
+                >
+              </mat-radio-group>
+            </div>
+          </div>
+          <div class="det-wrap">
+            <h4 class="det-title">Genre Range</h4>
+            <div class="det-content-wrap">
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange">Blues</mat-checkbox>
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange"
+                  >Hip-Hop/Rap</mat-checkbox
+                >
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange"
+                  >R&B/Soul</mat-checkbox
+                >
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange"
+                  >Classical</mat-checkbox
+                >
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange">Jazz</mat-checkbox>
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange">Custom</mat-checkbox>
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox formControlName="genreRange"
+                  >Country</mat-checkbox
+                >
+              </div>
+              <div class="check-box-wrap">
+                <mat-checkbox>Pop</mat-checkbox>
+              </div>
+            </div>
+          </div>
+          <div class="btn-wrap mb-16">
+            <button mat-button class="btn btn-green" type="submit">
+              Sign Up
+            </button>
+            <p class="login_label">Already have an account ? <a style="cursor: pointer; color: blue" (click)="isSignin = !isSignin">Login</a></p>
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="isSignin">
+  <app-signin></app-signin>
+</div>

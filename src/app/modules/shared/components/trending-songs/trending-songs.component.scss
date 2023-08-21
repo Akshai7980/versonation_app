@@ -1,0 +1,50 @@
+
+@import '../../../../../assets/scss/tools/variables';
+
+.item-wrapper{
+    margin-bottom: 30px;
+    .item{
+        figure{
+            height: 190px;
+            background-color: #c8c8c8;
+            overflow: hidden;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            padding: 15px;
+            h4{
+                color: $title-color;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+            }
+            p{
+                color: $primary-dark ;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .sub-title{
+        display: flex;
+        border-bottom: solid 1px #dcdcdc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        h4{
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .arrow-block{
+            margin-left: auto;
+            display: flex;
+            span{
+                margin-left: 10px;
+            }
+        }
+    }
+}

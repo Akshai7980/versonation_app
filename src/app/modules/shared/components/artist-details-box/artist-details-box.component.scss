@@ -1,0 +1,254 @@
+// Shadow Box
+.shadow-box-lg {
+  box-shadow: 0px 7px 14px rgba(65, 69, 88, 0.1),
+    0px 3px 6px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-bottom: 20px;
+
+  .title {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    .artist-info {
+      display: flex;
+      align-items: center;
+    }
+    .sort-icon {
+      margin-left: auto;
+      cursor: pointer;
+    }
+    figure {
+      width: 80px;
+      height: 80px;
+      background-color: #4169e1;
+      border: solid 4px #4169e1;
+      border-radius: 50%;
+      margin-right: 20px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    h4 {
+      font-size: 22px;
+      margin: 0 0 8px 0;
+      color: #1d1d1d;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+    .date-item {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      font-size: 12px;
+      color: #6d6d6d;
+      margin-right: 15px;
+      display: inline-flex;
+      align-items: center;
+      i {
+        margin-right: 5px;
+        height: 18px;
+      }
+    }
+  }
+  .content {
+    h2 {
+      font-size: 22px;
+      color: #1d1d1d;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+  }
+  .image-block {
+    border-radius: 6px;
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 15px;
+    figure {
+      height: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+  .respond-block {
+    display: flex;
+    align-items: center;
+    .social-item {
+      span {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 1s;
+        &:hover {
+          opacity: 0.8;
+        }
+        &.wishlist {
+          background-color: red;
+        }
+        &.like {
+          background-color: #4169e1;
+        }
+        &.share {
+          background-color: #00b130;
+        }
+        &.passive {
+          background-color: #9b9c98;
+        }
+      }
+      .count {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        color: black;
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+        width: 20px;
+        height: 20px;
+        background: grey;
+        color: white;
+      }
+    }
+    .respond-btn {
+      display: flex;
+      margin-left: auto;
+      .comments {
+        font-size: 14px;
+        color: grey;
+        margin-right: 10px;
+      }
+
+      button {
+        background-color: #fff;
+        border: solid 1px #4169e1;
+        border-radius: 30px;
+        padding: 4px 10px;
+        color: #4169e1;
+        font-size: 12px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: all 1s;
+        i {
+          margin-right: 5px;
+        }
+        &:hover {
+          background-color: #4169e1;
+          color: #fff;
+          i {
+            svg {
+              path {
+                stroke: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.scrollDiv {
+  overflow: auto;
+  margin: 18px;
+  min-height: 152px;
+  gap: 12px;
+  white-space: nowrap;
+  min-height: 140px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 8px 27px 8px;
+  margin: 0;
+  margin-bottom: 15px;
+
+  // flex-wrap: nowrap;
+  .thumbStyle1 {
+    width: 80px;
+    height: 82px;
+    background-size: cover !important;
+    background-position: center !important;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .cards {
+    &:first-child {
+      .thumbStyle1 {
+        margin-left: 0px;
+      }
+    }
+  }
+
+  // flex-wrap: nowrap;
+  .thumbStyle2 {
+    width: 80px;
+    height: 82px;
+    background-size: cover !important;
+    background-position: center !important;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    margin-left: 11px;
+  }
+
+  .cards {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // overflow-x: scroll;
+    .image-thump-block{
+      width: 100%;
+      height: 180px;
+      background-size: contain !important;
+    }
+    .caption{
+      text-align: center;
+      h5{
+        margin: 15px 0 0 0;
+        color: #000000;
+        font-size: 16px;
+      }
+      h6{
+        font-size: 13px;
+        color: #5e5e5e;
+      }
+    }
+  }
+
+  .elipsisTxt {
+    width: 110px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 !important;
+    color: #000000;
+  }
+
+  .smallText {
+    font-size: 12px;
+  }
+
+  p {
+    color: var(--ion-color-medium-tint);
+  }
+}

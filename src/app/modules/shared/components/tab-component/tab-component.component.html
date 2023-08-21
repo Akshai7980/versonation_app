@@ -1,0 +1,96 @@
+    <mat-tab-group>
+        <mat-tab label = "Timeline"> 
+            <div *ngIf="isEdit" class="shadow-box-lg">
+                <div class="comment-wrapper">
+                    <div class="comment-block">
+                        <figure class="profile_pic">
+                            <img class="profile" [src]="profileDetails?.profileImageUrl" alt=""/>
+                        </figure>
+                        <textarea placeholder=" What's in your Mind" [(ngModel)]="feedText"></textarea>
+                    </div>
+                    <div class="uploadMedia" *ngIf="mediaUrl">
+                        <i>
+                            <img class="close_icon" (click)="removeMedia()" src="../../../assets/images/icons/close-icon.svg" />
+                        </i>
+                        <figure >
+                            <img class="media" [src]="mediaUrl" alt="">
+                        </figure>
+                    </div>
+                    <div class="sort-block">
+                        <span class="attach">
+                        <i>
+                            <img src="../../../assets/images/icons/attachment-icon.svg" />
+                        </i>Attachments</span>
+                        <span class="image-choose" (click)="media.click()">
+                            <i>
+                                <img src="../../../assets/images/icons/image-icon.svg" />
+                            </i>
+                            Media
+                            <input #media hidden type="file" accept="image/*" (change)="uploadMedia($event.target)">
+                        </span>
+                        <span  class="type">Type </span>
+                        <button class="btn btn-outline-primary medium" (click)="postNewFeed()">Post</button>
+                    </div>
+                </div>
+            </div>
+            <app-artist-details-box *ngFor="let post of postData" [postData]="post" [uid]="uid"></app-artist-details-box>
+        </mat-tab>
+        <mat-tab  label = "Content">
+            <div  class="shadow-box-lg">
+                <div class="content-search">
+                    <input placeholder="Search" [(ngModel)]="serachTerm" (keyup)="getSerchTerm($event)"/>
+                    <button>
+                        <img src="../../../assets/images/icons/search-icon.svg" />
+                    </button>
+                </div>               
+            </div> 
+            <div class="shadow-box-lg content-updated-wrapper">
+                <div></div>
+                <div class="row">
+                   <app-content-sort-list [serachTerm]="serachTerm" (openMusicPannel)="openMusicPannel($event)"></app-content-sort-list>
+                </div>
+            </div>
+
+        </mat-tab>
+        <mat-tab  label = "About">
+            <div class="shadow-box-lg">
+                <div class="following-block">
+                    <div class="row">
+                        <app-following-block *ngFor="let item of artists" [artistData]="item"></app-following-block>
+                    </div>
+                    <div class="ftr-block">
+                        <a href="#">See more</a>
+                    </div>
+                </div>
+
+                <div class="map-block">
+                    <div class="item-block">
+                        <div class="item">
+                            <h5>Work</h5>
+                            <p>{{profileDetails?.work}}</p>
+                        </div>
+                        <div class="item">
+                            <h5>Contact Information</h5>
+                            <p> 
+                                <span *ngIf="profileDetails?.address">{{profileDetails?.address +', '}}</span>
+                                <span *ngIf="profileDetails?.city">{{profileDetails?.city +', '}}</span>
+                                <span *ngIf="profileDetails?.state">{{profileDetails?.state +', '}}</span>
+                                <span *ngIf="profileDetails?.zip">{{profileDetails?.zip}}</span>
+                            </p>
+                            <p>Phone : {{profileDetails?.contact}}</p>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <h5>Place live</h5>
+                        <div class="info">
+                            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=St.%20Louis+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+            
+
+        </mat-tab>
+    </mat-tab-group>

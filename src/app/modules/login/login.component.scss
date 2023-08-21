@@ -1,0 +1,43 @@
+@import '../../../styles.scss';
+
+// login page styles
+.wrapper {
+  min-height: 100vh;
+  background: url('../../../assets/images/login-bg-2.png');
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: 0% 45%;
+  // background-attachment: fixed;
+  padding-bottom: 50px;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    background-size: 100%;
+  }
+
+  @media (max-width: 992px) {
+    background-size: 120%;
+  }
+
+  @media (max-width: 768px) {
+    background-size: 150%;
+  }
+
+  @media (max-width: 576px) {
+    background-size: 200%;
+  }
+
+  .login-wrapper {
+    padding-top: 50px;
+
+    .log-footer {
+      font-size: 16px;
+      font-weight: 400;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  }
+}
